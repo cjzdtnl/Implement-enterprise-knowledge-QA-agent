@@ -1,0 +1,33 @@
+{
+  "run_id": "20261028T132930_c5c7603429ff",
+  "mode": "live",
+  "started_at": "2026-10-28T13:29:30.242833+00:00",
+  "ended_at": "2026-10-28T13:29:30.244054+00:00",
+  "duration_seconds": 0.00122,
+  "model": null,
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 30.0,
+    "run_timeout_seconds": 180.0
+  },
+  "corpus_file": "replaced_45.json",
+  "corpus_sha256": "9d370037fe233e68676342bd391cc326e6d0c66600cb8cf0c2e8183a2ff10ee8",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "none"
+  },
+  "transport_retries": 0,
+  "mock_scenario": null,
+  "notice": null,
+  "steps": 0,
+  "tool_calls": 0,
+  "model_requests": [],
+  "error": {
+    "code": "CONFIG_MISSING",
+    "message": "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+  },
+  "status": "model_error",
+  "stop_reason": "CONFIG_MISSING"
+}

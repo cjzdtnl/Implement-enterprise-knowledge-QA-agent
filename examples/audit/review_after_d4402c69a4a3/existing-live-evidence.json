@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "directory": "examples/live/web/live_454d2dc0c4ae4cdfae676564/20261031T102314_4d5a38b88d4b",
+      "status": "answered",
+      "steps": 3,
+      "tool_calls": 4,
+      "transport_retries": 0,
+      "usage_present": true,
+      "measured_latency_present": true,
+      "trace_chain_errors": [],
+      "sequence": [
+        "search_documents",
+        "search_documents",
+        "read_excerpt",
+        "search_documents",
+        "answered"
+      ]
+    }
+  ],
+  "notice": "依据已有本机 HTTP 运行产物及代码核验，不冒称为本轮重新请求；仍需第二种真实路径。"
+}

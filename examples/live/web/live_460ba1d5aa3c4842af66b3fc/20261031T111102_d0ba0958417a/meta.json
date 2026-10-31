@@ -1,0 +1,110 @@
+{
+  "run_id": "20261031T111102_d0ba0958417a",
+  "mode": "live",
+  "started_at": "2026-10-31T11:11:02.764286+00:00",
+  "ended_at": "2026-10-31T11:11:11.951628+00:00",
+  "duration_seconds": 9.187342,
+  "model": "deepseek-flash",
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 60,
+    "run_timeout_seconds": 300
+  },
+  "corpus_file": "no_conflict.json",
+  "corpus_sha256": "548eff5e40372052e2976eaa4819f2562651908c20a8a713650e65e0440f7ac0",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "none"
+  },
+  "transport_retries": 0,
+  "mock_scenario": null,
+  "notice": null,
+  "steps": 5,
+  "tool_calls": 5,
+  "model_requests": [
+    {
+      "step": 1,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 1730,
+        "completion_tokens": 177,
+        "total_tokens": 1907,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1602
+      },
+      "latency_ms": 1250.823
+    },
+    {
+      "step": 2,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 2520,
+        "completion_tokens": 179,
+        "total_tokens": 2699,
+        "prompt_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "prompt_cache_hit_tokens": 1792,
+        "prompt_cache_miss_tokens": 728
+      },
+      "latency_ms": 1218.729
+    },
+    {
+      "step": 3,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 3175,
+        "completion_tokens": 475,
+        "total_tokens": 3650,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 487
+      },
+      "latency_ms": 2847.755
+    },
+    {
+      "step": 4,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 3734,
+        "completion_tokens": 85,
+        "total_tokens": 3819,
+        "prompt_tokens_details": {
+          "cached_tokens": 3584
+        },
+        "prompt_cache_hit_tokens": 3584,
+        "prompt_cache_miss_tokens": 150
+      },
+      "latency_ms": 1330.615
+    },
+    {
+      "step": 5,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 3930,
+        "completion_tokens": 466,
+        "total_tokens": 4396,
+        "prompt_tokens_details": {
+          "cached_tokens": 3712
+        },
+        "prompt_cache_hit_tokens": 3712,
+        "prompt_cache_miss_tokens": 218
+      },
+      "latency_ms": 2528.391
+    }
+  ],
+  "error": null,
+  "provider": "deepseek",
+  "base_url": "https://api.deepseek.com",
+  "thinking": "disabled",
+  "server_strict_tools": false,
+  "status": "answered",
+  "stop_reason": "已读取提交期限与付款期限的原文，二者语义不冲突；原文未明确日的性质与起算规则，已在回答与知识缺口中说明。"
+}

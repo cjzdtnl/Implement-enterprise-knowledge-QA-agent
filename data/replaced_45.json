@@ -1,0 +1,141 @@
+{
+  "synthetic": true,
+  "description": "E09 合成替换 fixture：由无冲突版本将 D01 的 30 天替换为 45 天。",
+  "documents": [
+    {
+      "doc_id": "D01",
+      "title": "报销材料提交制度",
+      "version_date": "2025-01-10",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "报销材料须在费用发生后 45 天内提交。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D03",
+      "title": "年假申请流程",
+      "version_date": "2025-02-01",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D04",
+      "title": "账号密码安全 FAQ",
+      "version_date": "2025-02-10",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "账号密码至少包含 12 个字符。遗忘密码可通过内部门户发起重置。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D05",
+      "title": "会议室预约规则",
+      "version_date": "2025-03-01",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "会议室预约通过办公日历办理；单次预约最长 2 小时。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D06",
+      "title": "发票抬头 FAQ",
+      "version_date": "2025-03-05",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "报销发票抬头须填写“星河示例科技有限公司”。此公司名称为合成示例。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D07",
+      "title": "差旅机票预订规则",
+      "version_date": "2025-04-01",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "差旅机票通过行政预订平台购买；国际航班须事先取得部门负责人书面批准。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D08",
+      "title": "产品发布流程",
+      "version_date": "2025-04-10",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "产品发布前须完成测试验收，并由发布负责人记录版本号和回滚方案。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D09",
+      "title": "报销到账 FAQ",
+      "version_date": "2025-05-01",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "报销申请审批通过后，财务在 7 个工作日内安排付款。该时限指付款处理。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D10",
+      "title": "产品客服服务时间",
+      "version_date": "2025-05-10",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "产品客服的在线服务时间为工作日 09:00 至 18:00。"
+        }
+      ]
+    }
+  ]
+}

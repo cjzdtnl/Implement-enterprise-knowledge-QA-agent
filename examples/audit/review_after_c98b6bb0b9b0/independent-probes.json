@@ -1,0 +1,55 @@
+{
+  "notice": "显式离线负例，不是真实模型结果。",
+  "probes": [
+    {
+      "id": "B01",
+      "name": "数字相同但单位从天改成年",
+      "verdict": "PASS",
+      "fixture_output": {
+        "status": "answered",
+        "answer": "报销材料须在费用发生后 30 年内提交。",
+        "claims": [
+          {
+            "text": "报销材料须在费用发生后 30 年内提交。",
+            "citation_ids": [
+              "C1"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "C1",
+            "doc_id": "D01",
+            "version_date": "2025-01-10",
+            "section_id": "S01",
+            "quote": "报销材料须在费用发生后 30 天内提交。"
+          }
+        ],
+        "conflicts": [],
+        "knowledge_gaps": [],
+        "clarification_question": null,
+        "stop_reason": "explicit_offline_negative_fixture",
+        "run_id": "unit-negative"
+      },
+      "runtime_errors": [
+        {
+          "code": "UNSUPPORTED_QUANTITY",
+          "message": "claims[0] 中的数值与单位组合未能在对应原文核对：30年"
+        },
+        {
+          "code": "UNSUPPORTED_QUANTITY",
+          "message": "answer 中的数值与单位组合未能在对应原文核对：30年"
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "name": "没有执行工具就谎报持续失败",
+      "verdict": "PASS",
+      "directory": "examples/audit/review_after_c98b6bb0b9b0/B02/20261031T103102_67d507d1dc64",
+      "assessment_errors": [
+        "fault not observed"
+      ]
+    }
+  ]
+}

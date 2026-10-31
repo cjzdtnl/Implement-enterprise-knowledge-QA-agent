@@ -1,0 +1,153 @@
+{
+  "description": "运行前固定的 E01-E10 预期，编号只供评估器使用，不进入 live 输入或决策。",
+  "cases": [
+    {
+      "id": "E01",
+      "name": "明确答案",
+      "input": "examples/inputs/normal.json",
+      "corpus": "data/no_conflict.json",
+      "statuses": [
+        "answered"
+      ],
+      "expected_docs": [
+        "D01"
+      ],
+      "expected_numbers": [
+        "30"
+      ]
+    },
+    {
+      "id": "E02",
+      "name": "文档冲突",
+      "input": "examples/inputs/normal.json",
+      "corpus": "data/conflict.json",
+      "statuses": [
+        "needs_clarification"
+      ],
+      "expected_docs": [
+        "D01",
+        "D02"
+      ],
+      "expected_numbers": [
+        "30",
+        "15"
+      ],
+      "conflict": true
+    },
+    {
+      "id": "E03",
+      "name": "资料外问题",
+      "input": "examples/inputs/outside.json",
+      "corpus": "data/no_conflict.json",
+      "statuses": [
+        "insufficient_evidence"
+      ],
+      "mock_scenario": "outside"
+    },
+    {
+      "id": "E04",
+      "name": "相似改写",
+      "input": "examples/inputs/paraphrase.json",
+      "corpus": "data/no_conflict.json",
+      "statuses": [
+        "answered"
+      ],
+      "expected_docs": [
+        "D01"
+      ],
+      "expected_numbers": [
+        "30"
+      ]
+    },
+    {
+      "id": "E05",
+      "name": "上下文追问",
+      "input": "examples/inputs/followup.json",
+      "corpus": "data/no_conflict.json",
+      "statuses": [
+        "answered",
+        "needs_clarification"
+      ],
+      "expected_docs": [
+        "D01"
+      ],
+      "expected_numbers": [
+        "30"
+      ]
+    },
+    {
+      "id": "E06",
+      "name": "临时工具失败",
+      "input": "examples/inputs/normal.json",
+      "corpus": "data/no_conflict.json",
+      "statuses": [
+        "answered"
+      ],
+      "expected_docs": [
+        "D01"
+      ],
+      "expected_numbers": [
+        "30"
+      ],
+      "fault": "first_search"
+    },
+    {
+      "id": "E07",
+      "name": "持续工具失败",
+      "input": "examples/inputs/normal.json",
+      "corpus": "data/no_conflict.json",
+      "statuses": [
+        "tool_failed",
+        "step_limit"
+      ],
+      "fault": "always_search"
+    },
+    {
+      "id": "E08",
+      "name": "工具上限",
+      "input": "examples/inputs/normal.json",
+      "corpus": "data/no_conflict.json",
+      "statuses": [
+        "step_limit"
+      ],
+      "mock_scenario": "endless",
+      "budgets": {
+        "max_steps": 5,
+        "max_tool_calls": 2
+      }
+    },
+    {
+      "id": "E09",
+      "name": "内容替换45天",
+      "input": "examples/inputs/normal.json",
+      "corpus": "data/replaced_45.json",
+      "statuses": [
+        "answered"
+      ],
+      "expected_docs": [
+        "D01"
+      ],
+      "expected_numbers": [
+        "45"
+      ]
+    },
+    {
+      "id": "E10",
+      "name": "新增冲突",
+      "input": "examples/inputs/normal.json",
+      "corpus": "data/conflict.json",
+      "statuses": [
+        "needs_clarification"
+      ],
+      "expected_docs": [
+        "D01",
+        "D02"
+      ],
+      "expected_numbers": [
+        "30",
+        "15"
+      ],
+      "conflict": true
+    }
+  ]
+}

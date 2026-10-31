@@ -1,0 +1,128 @@
+{
+  "mode": "live",
+  "started_at": "2026-10-31T10:31:02.965564+00:00",
+  "expectations_sha256": "791e7d4f5e9029f5ab7922e872e8ba7c81d63424ed0b41cd4af1dc832837281b",
+  "notice": "真实模型评估，配置失败不降级为 Mock。",
+  "cases": [
+    {
+      "id": "E01",
+      "name": "明确答案",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_ad2b8d570fe3",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E01/20261031T103102_ad2b8d570fe3",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E02",
+      "name": "文档冲突",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_e2c6643ccc50",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E02/20261031T103102_e2c6643ccc50",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E03",
+      "name": "资料外问题",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_3645997566b5",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E03/20261031T103102_3645997566b5",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E04",
+      "name": "相似改写",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_4d1f691cdbaa",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E04/20261031T103102_4d1f691cdbaa",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E05",
+      "name": "上下文追问",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_22998372764d",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E05/20261031T103102_22998372764d",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E06",
+      "name": "临时工具失败",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_284ca88bbfed",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E06/20261031T103102_284ca88bbfed",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E07",
+      "name": "持续工具失败",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_010e6db34f1a",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E07/20261031T103102_010e6db34f1a",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E08",
+      "verdict": "NOT_RUN",
+      "reason": "该用例为 Mock 持续工具请求的执行器预算测试"
+    },
+    {
+      "id": "E09",
+      "name": "内容替换45天",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_ca78e7815431",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E09/20261031T103102_ca78e7815431",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E10",
+      "name": "新增冲突",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261031T103102_2b5e3b64c355",
+      "directory": "examples/live/evaluation_2026-10-31T103102_965436+0000_4dff35/E10/20261031T103102_2b5e3b64c355",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    }
+  ],
+  "ended_at": "2026-10-31T10:31:02.981964+00:00",
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "BLOCKED": 9,
+    "NOT_RUN": 1
+  }
+}

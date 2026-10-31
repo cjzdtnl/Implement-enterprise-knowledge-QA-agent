@@ -1,0 +1,128 @@
+{
+  "mode": "live",
+  "started_at": "2026-10-28T13:29:30.224757+00:00",
+  "expectations_sha256": "791e7d4f5e9029f5ab7922e872e8ba7c81d63424ed0b41cd4af1dc832837281b",
+  "notice": "真实模型评估，配置失败不降级为 Mock。",
+  "cases": [
+    {
+      "id": "E01",
+      "name": "明确答案",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_8957414b6744",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E01/20261028T132930_8957414b6744",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E02",
+      "name": "文档冲突",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_93fb36f2d79f",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E02/20261028T132930_93fb36f2d79f",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E03",
+      "name": "资料外问题",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_69221668c0e8",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E03/20261028T132930_69221668c0e8",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E04",
+      "name": "相似改写",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_b689154fd49c",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E04/20261028T132930_b689154fd49c",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E05",
+      "name": "上下文追问",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_9cfd0430f114",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E05/20261028T132930_9cfd0430f114",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E06",
+      "name": "临时工具失败",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_639a975e5c8b",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E06/20261028T132930_639a975e5c8b",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E07",
+      "name": "持续工具失败",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_2d5e3a7fb3cd",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E07/20261028T132930_2d5e3a7fb3cd",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E08",
+      "verdict": "NOT_RUN",
+      "reason": "该用例为 Mock 持续工具请求的执行器预算测试"
+    },
+    {
+      "id": "E09",
+      "name": "内容替换45天",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_c5c7603429ff",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E09/20261028T132930_c5c7603429ff",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E10",
+      "name": "新增冲突",
+      "verdict": "BLOCKED",
+      "status": "model_error",
+      "run_id": "20261028T132930_2f6c59e3675d",
+      "directory": "examples/live/evaluation_2026-10-28T132930_224560+0000_d83c57/E10/20261028T132930_2f6c59e3675d",
+      "checks_failed": [
+        "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL"
+      ],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    }
+  ],
+  "ended_at": "2026-10-28T13:29:30.246825+00:00",
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "BLOCKED": 9,
+    "NOT_RUN": 1
+  }
+}

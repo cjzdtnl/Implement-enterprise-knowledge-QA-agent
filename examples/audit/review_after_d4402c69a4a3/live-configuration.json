@@ -1,0 +1,7 @@
+{
+  "env_file_exists": false,
+  "config_error": null,
+  "key_available": false,
+  "verdict": "BLOCKED",
+  "reason": "当前项目无可用密钥；配置失败不是模型行为证据。"
+}

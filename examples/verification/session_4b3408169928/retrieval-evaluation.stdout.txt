@@ -1,0 +1,45 @@
+{
+  "report": "examples/retrieval/comparison_8c3e432687f5/report.json",
+  "summary": {
+    "before": {
+      "all": {
+        "query_count": 10,
+        "mean_recall_at_k": 0.8,
+        "complete_recall_rate": 0.8,
+        "conflict_both_rate": 0.6666666666666666
+      },
+      "dev": {
+        "query_count": 7,
+        "mean_recall_at_k": 0.8571428571428571,
+        "complete_recall_rate": 0.8571428571428571,
+        "conflict_both_rate": 0.5
+      },
+      "heldout": {
+        "query_count": 3,
+        "mean_recall_at_k": 0.6666666666666666,
+        "complete_recall_rate": 0.6666666666666666,
+        "conflict_both_rate": 1.0
+      }
+    },
+    "after": {
+      "all": {
+        "query_count": 10,
+        "mean_recall_at_k": 1.0,
+        "complete_recall_rate": 1.0,
+        "conflict_both_rate": 1.0
+      },
+      "dev": {
+        "query_count": 7,
+        "mean_recall_at_k": 1.0,
+        "complete_recall_rate": 1.0,
+        "conflict_both_rate": 1.0
+      },
+      "heldout": {
+        "query_count": 3,
+        "mean_recall_at_k": 1.0,
+        "complete_recall_rate": 1.0,
+        "conflict_both_rate": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "pip-check",
+    "command": [
+      "python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "started_at": "2026-10-28T13:29:27.349778+00:00",
+    "ended_at": "2026-10-28T13:29:27.891770+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.54199
+  },
+  {
+    "name": "offline-tests",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-q",
+      "-m",
+      "not live",
+      "--tb=short"
+    ],
+    "started_at": "2026-10-28T13:29:27.891791+00:00",
+    "ended_at": "2026-10-28T13:29:29.322079+00:00",
+    "exit_code": 0,
+    "duration_seconds": 1.430294
+  },
+  {
+    "name": "mock-evaluation",
+    "command": [
+      "python",
+      "-m",
+      "kb_agent",
+      "evaluate",
+      "--mode",
+      "mock"
+    ],
+    "started_at": "2026-10-28T13:29:29.322099+00:00",
+    "ended_at": "2026-10-28T13:29:29.902423+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.58033
+  },
+  {
+    "name": "live-evaluation",
+    "command": [
+      "python",
+      "-m",
+      "kb_agent",
+      "evaluate",
+      "--mode",
+      "live"
+    ],
+    "started_at": "2026-10-28T13:29:29.902441+00:00",
+    "ended_at": "2026-10-28T13:29:30.274308+00:00",
+    "exit_code": 2,
+    "duration_seconds": 0.371873
+  },
+  {
+    "name": "retrieval-evaluation",
+    "command": [
+      "python",
+      "-m",
+      "kb_agent",
+      "retrieval-eval"
+    ],
+    "started_at": "2026-10-28T13:29:30.274327+00:00",
+    "ended_at": "2026-10-28T13:29:30.633191+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.358871
+  }
+]

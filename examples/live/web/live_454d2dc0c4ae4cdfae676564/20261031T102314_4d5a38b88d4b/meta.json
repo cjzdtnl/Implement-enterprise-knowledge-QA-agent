@@ -1,0 +1,80 @@
+{
+  "run_id": "20261031T102314_4d5a38b88d4b",
+  "mode": "live",
+  "started_at": "2026-10-31T10:23:14.434222+00:00",
+  "ended_at": "2026-10-31T10:23:19.959567+00:00",
+  "duration_seconds": 5.525349,
+  "model": "deepseek-flash",
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 60,
+    "run_timeout_seconds": 300
+  },
+  "corpus_file": "no_conflict.json",
+  "corpus_sha256": "548eff5e40372052e2976eaa4819f2562651908c20a8a713650e65e0440f7ac0",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "none"
+  },
+  "transport_retries": 0,
+  "mock_scenario": null,
+  "notice": null,
+  "steps": 3,
+  "tool_calls": 4,
+  "model_requests": [
+    {
+      "step": 1,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 1727,
+        "completion_tokens": 185,
+        "total_tokens": 1912,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1727
+      },
+      "latency_ms": 1452.056
+    },
+    {
+      "step": 2,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 2453,
+        "completion_tokens": 196,
+        "total_tokens": 2649,
+        "prompt_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "prompt_cache_hit_tokens": 1792,
+        "prompt_cache_miss_tokens": 661
+      },
+      "latency_ms": 1757.592
+    },
+    {
+      "step": 3,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 2982,
+        "completion_tokens": 274,
+        "total_tokens": 3256,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 422
+      },
+      "latency_ms": 2290.107
+    }
+  ],
+  "error": null,
+  "provider": "deepseek",
+  "base_url": "https://api.deepseek.com",
+  "thinking": "disabled",
+  "server_strict_tools": false,
+  "status": "answered",
+  "stop_reason": "已读取唯一相关制度的准确原文，未发现期限冲突或其他替代规定，可以回答。"
+}

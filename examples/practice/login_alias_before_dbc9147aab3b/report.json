@@ -1,0 +1,71 @@
+{
+  "phase": "before",
+  "created_at": "2026-10-31T10:50:15.173225+00:00",
+  "corpus_sha256": "7f37a5d497744dcac26201da6430364515f874ca903f8ae6562a7fe4c8c569e0",
+  "retrieval_source_sha256": "76b96134176701690af5db603a6b5a4b8ce45931b7a9774ed51f4f8fab1a3310",
+  "rows": [
+    {
+      "role": "development",
+      "query": "忘了登录暗号怎么办",
+      "tokens": [
+        "忘了",
+        "了登",
+        "登录",
+        "录暗",
+        "暗号",
+        "号怎",
+        "怎么",
+        "么办"
+      ],
+      "expected_doc_ids": [
+        "D04"
+      ],
+      "hits": [],
+      "verdict": "FAIL"
+    },
+    {
+      "role": "transfer_check",
+      "query": "登录暗号忘记了去哪里重设",
+      "tokens": [
+        "登录",
+        "录暗",
+        "暗号",
+        "号忘",
+        "忘记",
+        "记了",
+        "了去",
+        "去哪",
+        "哪里",
+        "里重",
+        "重设"
+      ],
+      "expected_doc_ids": [
+        "D04"
+      ],
+      "hits": [],
+      "verdict": "FAIL"
+    },
+    {
+      "role": "negative_control",
+      "query": "活动接头暗号是什么",
+      "tokens": [
+        "活动",
+        "动接",
+        "接头",
+        "头暗",
+        "暗号",
+        "号是",
+        "是什",
+        "什么"
+      ],
+      "expected_doc_ids": [],
+      "hits": [],
+      "verdict": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 1,
+    "FAIL": 2
+  },
+  "notice": "仅检索词面练习，不是Live模型效果；个人是否亲手完成须本人确认。新增词表后此transfer_check不能再称为独立盲测。"
+}

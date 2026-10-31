@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "scripts/build_evaluation_docs.py",
+    "--verification-dir",
+    "examples\\audit\\review_after_d4402c69a4a3"
+  ],
+  "started_at": "2026-10-31T10:36:51.960065+00:00",
+  "ended_at": "2026-10-31T10:36:52.522045+00:00",
+  "exit_code": 1,
+  "notice": "Windows pip freeze 输出编码错误；此失败不是 Agent Trace。"
+}

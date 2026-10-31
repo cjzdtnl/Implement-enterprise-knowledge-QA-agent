@@ -1,0 +1,103 @@
+{
+  "run_id": "20261031T103430_7e880dbe044b",
+  "mode": "mock",
+  "started_at": "2026-10-31T10:34:30.355915+00:00",
+  "ended_at": "2026-10-31T10:34:30.367591+00:00",
+  "duration_seconds": 0.011672,
+  "model": "offline-audit-adversarial-fixture",
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 30,
+    "run_timeout_seconds": 180
+  },
+  "corpus_file": "conflict.json",
+  "corpus_sha256": "7f37a5d497744dcac26201da6430364515f874ca903f8ae6562a7fe4c8c569e0",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "none"
+  },
+  "transport_retries": 0,
+  "mock_scenario": "explicit_offline_audit_A02",
+  "notice": "离线 Mock 只验证工程流程，不证明真实模型决策效果。",
+  "steps": 12,
+  "tool_calls": 4,
+  "model_requests": [
+    {
+      "step": 1,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 2,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 3,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 4,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 5,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 6,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 7,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 8,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 9,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 10,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 11,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 12,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    }
+  ],
+  "error": null,
+  "status": "step_limit",
+  "stop_reason": "max_steps"
+}

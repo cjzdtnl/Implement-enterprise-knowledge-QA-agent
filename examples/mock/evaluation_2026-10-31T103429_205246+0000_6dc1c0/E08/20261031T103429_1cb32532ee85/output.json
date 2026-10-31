@@ -1,0 +1,13 @@
+{
+  "status": "step_limit",
+  "answer": "工具调用预算耗尽，任务未完成。",
+  "claims": [],
+  "citations": [],
+  "conflicts": [],
+  "knowledge_gaps": [
+    "任务未完成；已读取证据予以保留，尚不能据此确定答案。"
+  ],
+  "clarification_question": null,
+  "stop_reason": "max_tool_calls",
+  "run_id": "20261031T103429_1cb32532ee85"
+}

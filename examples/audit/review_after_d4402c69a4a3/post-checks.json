@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "python",
+      "scripts/build_evaluation_docs.py",
+      "--verification-dir",
+      "examples\\audit\\review_after_d4402c69a4a3"
+    ],
+    "name": "doc-generation-after",
+    "started_at": "2026-10-31T10:39:16.705199+00:00",
+    "ended_at": "2026-10-31T10:39:17.216450+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.511251
+  },
+  {
+    "command": [
+      "python",
+      "scripts/check_delivery.py"
+    ],
+    "name": "delivery-check",
+    "started_at": "2026-10-31T10:39:17.216474+00:00",
+    "ended_at": "2026-10-31T10:39:17.700522+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.484055
+  }
+]

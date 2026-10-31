@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-28T13:43:03.522453+00:00",
+  "command": [
+    "python",
+    "scripts/check_delivery.py"
+  ],
+  "exit_code": 0,
+  "result": {
+    "run_artifacts_checked": 40,
+    "eligible_files": 235,
+    "errors": [],
+    "notice": "只校验工程证据一致性，不评判真实模型行为或完整语义。"
+  }
+}

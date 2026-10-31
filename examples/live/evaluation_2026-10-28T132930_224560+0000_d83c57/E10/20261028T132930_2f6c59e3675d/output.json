@@ -1,0 +1,13 @@
+{
+  "status": "model_error",
+  "answer": "缺少环境变量：LLM_API_KEY, LLM_BASE_URL, LLM_MODEL",
+  "claims": [],
+  "citations": [],
+  "conflicts": [],
+  "knowledge_gaps": [
+    "任务未完成；已读取证据予以保留，尚不能据此确定答案。"
+  ],
+  "clarification_question": null,
+  "stop_reason": "CONFIG_MISSING",
+  "run_id": "20261028T132930_2f6c59e3675d"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "tool_failed",
+  "answer": "检索服务持续失败，无法取得制度依据。",
+  "claims": [],
+  "citations": [],
+  "conflicts": [],
+  "knowledge_gaps": [
+    "缺少可用检索结果。"
+  ],
+  "clarification_question": null,
+  "stop_reason": "mock_fixture_completed",
+  "run_id": "20261030T142336_0b49e1ea6f38"
+}

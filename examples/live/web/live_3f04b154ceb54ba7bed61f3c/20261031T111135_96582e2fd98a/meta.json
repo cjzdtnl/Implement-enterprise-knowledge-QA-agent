@@ -1,0 +1,110 @@
+{
+  "run_id": "20261031T111135_96582e2fd98a",
+  "mode": "live",
+  "started_at": "2026-10-31T11:11:35.999477+00:00",
+  "ended_at": "2026-10-31T11:11:46.500873+00:00",
+  "duration_seconds": 10.501395,
+  "model": "deepseek-flash",
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 60,
+    "run_timeout_seconds": 300
+  },
+  "corpus_file": "conflict.json",
+  "corpus_sha256": "7f37a5d497744dcac26201da6430364515f874ca903f8ae6562a7fe4c8c569e0",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "none"
+  },
+  "transport_retries": 0,
+  "mock_scenario": null,
+  "notice": null,
+  "steps": 5,
+  "tool_calls": 6,
+  "model_requests": [
+    {
+      "step": 1,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 1724,
+        "completion_tokens": 174,
+        "total_tokens": 1898,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1596
+      },
+      "latency_ms": 1249.32
+    },
+    {
+      "step": 2,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 2639,
+        "completion_tokens": 173,
+        "total_tokens": 2812,
+        "prompt_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "prompt_cache_hit_tokens": 1792,
+        "prompt_cache_miss_tokens": 847
+      },
+      "latency_ms": 1348.29
+    },
+    {
+      "step": 3,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 3011,
+        "completion_tokens": 198,
+        "total_tokens": 3209,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 323
+      },
+      "latency_ms": 1460.679
+    },
+    {
+      "step": 4,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 4096,
+        "completion_tokens": 642,
+        "total_tokens": 4738,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 896
+      },
+      "latency_ms": 3605.995
+    },
+    {
+      "step": 5,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 4824,
+        "completion_tokens": 599,
+        "total_tokens": 5423,
+        "prompt_tokens_details": {
+          "cached_tokens": 4608
+        },
+        "prompt_cache_hit_tokens": 4608,
+        "prompt_cache_miss_tokens": 216
+      },
+      "latency_ms": 2824.07
+    }
+  ],
+  "error": null,
+  "provider": "deepseek",
+  "base_url": "https://api.deepseek.com",
+  "thinking": "disabled",
+  "server_strict_tools": false,
+  "status": "needs_clarification",
+  "stop_reason": "两份原文对同一事项给出不同期限，且无原文说明替代或优先关系，按规则需员工澄清适用制度"
+}

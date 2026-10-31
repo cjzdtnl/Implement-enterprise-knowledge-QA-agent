@@ -1,0 +1,65 @@
+........................................................................ [ 67%]
+.............................F....                                       [100%]
+================================== FAILURES ===================================
+______________ test_local_mutation_requires_same_origin[change0] ______________
+..\.venv\Lib\site-packages\httpx\_transports\default.py:101: in map_httpcore_exceptions
+    yield
+..\.venv\Lib\site-packages\httpx\_transports\default.py:250: in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py:256: in handle_request
+    raise exc from None
+..\.venv\Lib\site-packages\httpcore\_sync\connection_pool.py:236: in handle_request
+    response = connection.handle_request(
+..\.venv\Lib\site-packages\httpcore\_sync\connection.py:103: in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpcore\_sync\http11.py:136: in handle_request
+    raise exc
+..\.venv\Lib\site-packages\httpcore\_sync\http11.py:106: in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpcore\_sync\http11.py:177: in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpcore\_sync\http11.py:217: in _receive_event
+    data = self._network_stream.read(
+..\.venv\Lib\site-packages\httpcore\_backends\sync.py:126: in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\cjtnl\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py:162: in __exit__
+    self.gen.throw(value)
+..\.venv\Lib\site-packages\httpcore\_exceptions.py:14: in map_exceptions
+    raise to_exc(exc) from exc
+E   httpcore.ReadError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+The above exception was the direct cause of the following exception:
+tests\test_web.py:156: in test_local_mutation_requires_same_origin
+    response = client.post("/api/runs", json={"question": "test"}, **change)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpx\_client.py:1144: in post
+    return self.request(
+..\.venv\Lib\site-packages\httpx\_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpx\_client.py:914: in send
+    response = self._send_handling_auth(
+..\.venv\Lib\site-packages\httpx\_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+..\.venv\Lib\site-packages\httpx\_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpx\_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\.venv\Lib\site-packages\httpx\_transports\default.py:249: in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\cjtnl\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py:162: in __exit__
+    self.gen.throw(value)
+..\.venv\Lib\site-packages\httpx\_transports\default.py:118: in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+E   httpx.ReadError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+=========================== short test summary info ===========================
+FAILED tests/test_web.py::test_local_mutation_requires_same_origin[change0]
+1 failed, 105 passed, 1 deselected in 9.90s

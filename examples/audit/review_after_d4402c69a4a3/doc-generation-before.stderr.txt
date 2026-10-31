@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "F:\Œƒµµ\ChatGPT\–°”∞±  ‘\scripts\build_evaluation_docs.py", line 132, in <module>
+    freeze = subprocess.check_output([sys.executable, "-m", "pip", "freeze"], encoding="utf-8")
+  File "C:\Users\cjtnl\AppData\Local\Python\pythoncore-3.14-64\Lib\subprocess.py", line 473, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "C:\Users\cjtnl\AppData\Local\Python\pythoncore-3.14-64\Lib\subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjtnl\AppData\Local\Python\pythoncore-3.14-64\Lib\subprocess.py", line 1208, in communicate
+    stdout = self.stdout.read()
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xce in position 151: invalid continuation byte

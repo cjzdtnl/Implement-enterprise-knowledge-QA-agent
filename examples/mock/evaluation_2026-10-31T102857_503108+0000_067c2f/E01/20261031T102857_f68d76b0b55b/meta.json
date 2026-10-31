@@ -1,0 +1,49 @@
+{
+  "run_id": "20261031T102857_f68d76b0b55b",
+  "mode": "mock",
+  "started_at": "2026-10-31T10:28:57.505000+00:00",
+  "ended_at": "2026-10-31T10:28:57.510516+00:00",
+  "duration_seconds": 0.005515,
+  "model": "offline-scripted-mock-v1",
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 30.0,
+    "run_timeout_seconds": 180.0
+  },
+  "corpus_file": "no_conflict.json",
+  "corpus_sha256": "548eff5e40372052e2976eaa4819f2562651908c20a8a713650e65e0440f7ac0",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "none"
+  },
+  "transport_retries": 0,
+  "mock_scenario": "reimbursement",
+  "notice": "离线 Mock 只验证工程流程，不证明真实模型决策效果。",
+  "steps": 3,
+  "tool_calls": 2,
+  "model_requests": [
+    {
+      "step": 1,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 2,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    },
+    {
+      "step": 3,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    }
+  ],
+  "error": null,
+  "status": "answered",
+  "stop_reason": "mock_fixture_completed"
+}

@@ -1,0 +1,37 @@
+{
+  "run_id": "20261031T102858_9eb339946804",
+  "mode": "mock",
+  "started_at": "2026-10-31T10:28:58.777881+00:00",
+  "ended_at": "2026-10-31T10:28:58.781513+00:00",
+  "duration_seconds": 0.003636,
+  "model": "explicit-offline-no-attempt-fixture",
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 30,
+    "run_timeout_seconds": 180
+  },
+  "corpus_file": "no_conflict.json",
+  "corpus_sha256": "548eff5e40372052e2976eaa4819f2562651908c20a8a713650e65e0440f7ac0",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "always_search"
+  },
+  "transport_retries": 0,
+  "mock_scenario": "reimbursement",
+  "notice": "离线 Mock 只验证工程流程，不证明真实模型决策效果。",
+  "steps": 1,
+  "tool_calls": 0,
+  "model_requests": [
+    {
+      "step": 1,
+      "request_id": null,
+      "usage": null,
+      "latency_ms": null
+    }
+  ],
+  "error": null,
+  "status": "tool_failed",
+  "stop_reason": "explicit_offline_no_attempt"
+}

@@ -1,0 +1,13 @@
+Processing .\.
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: enterprise-kb-agent
+  Building wheel for enterprise-kb-agent (pyproject.toml): started
+  Building wheel for enterprise-kb-agent (pyproject.toml): finished with status 'done'
+  Created wheel for enterprise-kb-agent: filename=enterprise_kb_agent-0.1.0-py3-none-any.whl size=55385 sha256=e545abe50364eb9069816d547158390f66d8fe4d44621f0d1831b8f50601bae9
+  Stored in directory: C:\Users\cjtnl\AppData\Local\Temp\pip-ephem-wheel-cache-epr4ge11\wheels\62\3a\e8\9b14d3d43013af47b8fded084edfe0c5eafaf3adcc36885d45
+Successfully built enterprise-kb-agent

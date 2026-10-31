@@ -1,0 +1,52 @@
+{
+  "notice": "Mock 验证重新加载及执行机制，真实模型响应变化另列。",
+  "runs": [
+    {
+      "name": "original",
+      "mode": "mock",
+      "verdict": "PASS",
+      "errors": [],
+      "directory": "examples/audit/review_after_d4402c69a4a3/original/20261031T103430_948370907ff7",
+      "fixture": "examples/audit/review_after_d4402c69a4a3/fixtures/original.json",
+      "status": "answered",
+      "corpus_sha256": "77414ebd621e49134cd4d96c2fb4b3ba621e4342aaa51405c2d07fe10a0c8c9d",
+      "path": [
+        "search_documents",
+        "read_excerpt",
+        "answered"
+      ]
+    },
+    {
+      "name": "changed45",
+      "mode": "mock",
+      "verdict": "PASS",
+      "errors": [],
+      "directory": "examples/audit/review_after_d4402c69a4a3/changed45/20261031T103430_0eab4c12337f",
+      "fixture": "examples/audit/review_after_d4402c69a4a3/fixtures/changed45.json",
+      "status": "answered",
+      "corpus_sha256": "e686b8ca4e46881d352a3c508c834c86aa27c16db7b45fc5b4e1a1cae437eeab",
+      "path": [
+        "search_documents",
+        "read_excerpt",
+        "answered"
+      ]
+    },
+    {
+      "name": "added-conflict",
+      "mode": "mock",
+      "verdict": "PASS",
+      "errors": [],
+      "directory": "examples/audit/review_after_d4402c69a4a3/added-conflict/20261031T103430_e90e1595e006",
+      "fixture": "examples/audit/review_after_d4402c69a4a3/fixtures/added-conflict.json",
+      "status": "needs_clarification",
+      "corpus_sha256": "93d3d7043076e71c608fe0281a5c29b3a086b7f1dfceb804de01997a03eb8089",
+      "path": [
+        "search_documents",
+        "read_excerpt",
+        "read_excerpt",
+        "search_documents",
+        "needs_clarification"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "run_id": "20261031T111131_ea474904763a",
+  "mode": "live",
+  "started_at": "2026-10-31T11:11:31.398706+00:00",
+  "ended_at": "2026-10-31T11:11:35.926664+00:00",
+  "duration_seconds": 4.527956,
+  "model": "deepseek-flash",
+  "api_style": "chat_completions_native_tools",
+  "config": {
+    "max_steps": 12,
+    "max_tool_calls": 10,
+    "timeout_seconds": 60,
+    "run_timeout_seconds": 300
+  },
+  "corpus_file": "replaced_45.json",
+  "corpus_sha256": "9d370037fe233e68676342bd391cc326e6d0c66600cb8cf0c2e8183a2ff10ee8",
+  "retrieval": "bm25_bigrams_normalized",
+  "fault_injection": {
+    "mode": "none"
+  },
+  "transport_retries": 0,
+  "mock_scenario": null,
+  "notice": null,
+  "steps": 3,
+  "tool_calls": 4,
+  "model_requests": [
+    {
+      "step": 1,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 1722,
+        "completion_tokens": 165,
+        "total_tokens": 1887,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 1594
+      },
+      "latency_ms": 1124.688
+    },
+    {
+      "step": 2,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 2498,
+        "completion_tokens": 169,
+        "total_tokens": 2667,
+        "prompt_tokens_details": {
+          "cached_tokens": 1792
+        },
+        "prompt_cache_hit_tokens": 1792,
+        "prompt_cache_miss_tokens": 706
+      },
+      "latency_ms": 1425.06
+    },
+    {
+      "step": 3,
+      "request_id": null,
+      "usage": {
+        "prompt_tokens": 3145,
+        "completion_tokens": 276,
+        "total_tokens": 3421,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 585
+      },
+      "latency_ms": 1968.747
+    }
+  ],
+  "error": null,
+  "provider": "deepseek",
+  "base_url": "https://api.deepseek.com",
+  "thinking": "disabled",
+  "server_strict_tools": false,
+  "status": "answered",
+  "stop_reason": "已在报销材料提交制度中取得明确期限原文，且未发现其他冲突期限来源。"
+}

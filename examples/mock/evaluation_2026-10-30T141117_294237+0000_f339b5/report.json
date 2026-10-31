@@ -1,0 +1,115 @@
+{
+  "mode": "mock",
+  "started_at": "2026-10-30T14:11:17.294384+00:00",
+  "expectations_sha256": "791e7d4f5e9029f5ab7922e872e8ba7c81d63424ed0b41cd4af1dc832837281b",
+  "notice": "离线 Mock 只验证工程流程，不证明真实模型决策效果。",
+  "cases": [
+    {
+      "id": "E01",
+      "name": "明确答案",
+      "verdict": "PASS",
+      "status": "answered",
+      "run_id": "20261030T141117_dfca8cb14ce0",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E01/20261030T141117_dfca8cb14ce0",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E02",
+      "name": "文档冲突",
+      "verdict": "PASS",
+      "status": "needs_clarification",
+      "run_id": "20261030T141117_48b08ccb39fd",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E02/20261030T141117_48b08ccb39fd",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E03",
+      "name": "资料外问题",
+      "verdict": "PASS",
+      "status": "insufficient_evidence",
+      "run_id": "20261030T141117_6640c9f18013",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E03/20261030T141117_6640c9f18013",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E04",
+      "name": "相似改写",
+      "verdict": "PASS",
+      "status": "answered",
+      "run_id": "20261030T141117_bd8422e4f116",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E04/20261030T141117_bd8422e4f116",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E05",
+      "name": "上下文追问",
+      "verdict": "PASS",
+      "status": "answered",
+      "run_id": "20261030T141117_bccc0e785282",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E05/20261030T141117_bccc0e785282",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E06",
+      "name": "临时工具失败",
+      "verdict": "PASS",
+      "status": "answered",
+      "run_id": "20261030T141117_a7ef747702b2",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E06/20261030T141117_a7ef747702b2",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E07",
+      "name": "持续工具失败",
+      "verdict": "PASS",
+      "status": "tool_failed",
+      "run_id": "20261030T141117_0ad79364fb2b",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E07/20261030T141117_0ad79364fb2b",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E08",
+      "name": "工具上限",
+      "verdict": "PASS",
+      "status": "step_limit",
+      "run_id": "20261030T141117_2560ccb35a32",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E08/20261030T141117_2560ccb35a32",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E09",
+      "name": "内容替换45天",
+      "verdict": "PASS",
+      "status": "answered",
+      "run_id": "20261030T141117_19bb91a43c74",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E09/20261030T141117_19bb91a43c74",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    },
+    {
+      "id": "E10",
+      "name": "新增冲突",
+      "verdict": "PASS",
+      "status": "needs_clarification",
+      "run_id": "20261030T141117_0a1c4ecd401a",
+      "directory": "examples/mock/evaluation_2026-10-30T141117_294237+0000_f339b5/E10/20261030T141117_0a1c4ecd401a",
+      "checks_failed": [],
+      "semantic_review": "数字/对象/条件等有限自动检查；完整语义支持待人工复核"
+    }
+  ],
+  "ended_at": "2026-10-30T14:11:17.498233+00:00",
+  "counts": {
+    "PASS": 10,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "NOT_RUN": 0
+  }
+}

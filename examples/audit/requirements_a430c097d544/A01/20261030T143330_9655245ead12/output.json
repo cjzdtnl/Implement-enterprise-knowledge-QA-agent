@@ -1,0 +1,21 @@
+{
+  "status": "step_limit",
+  "answer": "模型请求预算耗尽，任务未完成。",
+  "claims": [],
+  "citations": [
+    {
+      "citation_id": "retained_1",
+      "doc_id": "D01",
+      "version_date": "2025-01-10",
+      "section_id": "S01",
+      "quote": "报销材料须在费用发生后 30 天内提交。"
+    }
+  ],
+  "conflicts": [],
+  "knowledge_gaps": [
+    "任务未完成；已读取证据予以保留，尚不能据此确定答案。"
+  ],
+  "clarification_question": null,
+  "stop_reason": "max_steps",
+  "run_id": "20261030T143330_9655245ead12"
+}

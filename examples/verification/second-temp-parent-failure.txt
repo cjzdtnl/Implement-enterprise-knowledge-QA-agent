@@ -1,0 +1,119 @@
+.......EEEEEEEEEEEEEEEEEEEEEEE..........................                 [100%]
+=================================== ERRORS ====================================
+_______ ERROR at setup of test_missing_key_live_saves_failure_not_mock ________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+________ ERROR at setup of test_installed_cli_from_outside_repository _________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E01] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E02] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E03] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E04] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E05] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E06] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E07] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E08] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E09] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___________ ERROR at setup of test_acceptance_mock_engineering[E10] ___________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+__ ERROR at setup of test_exact_tool_observation_in_next_request_and_history __
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+__________ ERROR at setup of test_repair_invalid_quote_uses_feedback __________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+___ ERROR at setup of test_unread_citation_requires_new_model_selected_read ___
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+_____ ERROR at setup of test_repeated_invalid_finals_cannot_escape_budget _____
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+_ ERROR at setup of test_batch_counted_individually_and_retains_read_evidence _
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+________ ERROR at setup of test_unknown_tool_failure_returned_to_model ________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+____________ ERROR at setup of test_hidden_reasoning_not_persisted ____________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+______ ERROR at setup of test_no_automatic_business_retry_on_model_error ______
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+_____ ERROR at setup of test_timeout_checked_after_model_and_before_tools _____
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+________________ ERROR at setup of test_unique_run_directories ________________
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+_____ ERROR at setup of test_history_injection_stays_inside_data_envelope _____
+..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:1011: in mkdir
+    os.mkdir(self, mode)
+E   FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'C:\\Users\\cjtnl\\Desktop\\��ְ\\ѧϰ\\СӰ����\\work\\pytest\\458e3ea504df4be0976ac2b803e2d447'
+=========================== short test summary info ===========================
+ERROR tests/test_model_cli.py::test_missing_key_live_saves_failure_not_mock
+ERROR tests/test_model_cli.py::test_installed_cli_from_outside_repository - F...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E01] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E02] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E03] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E04] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E05] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E06] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E07] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E08] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E09] - FileNotFo...
+ERROR tests/test_runner.py::test_acceptance_mock_engineering[E10] - FileNotFo...
+ERROR tests/test_runner.py::test_exact_tool_observation_in_next_request_and_history
+ERROR tests/test_runner.py::test_repair_invalid_quote_uses_feedback - FileNot...
+ERROR tests/test_runner.py::test_unread_citation_requires_new_model_selected_read
+ERROR tests/test_runner.py::test_repeated_invalid_finals_cannot_escape_budget
+ERROR tests/test_runner.py::test_batch_counted_individually_and_retains_read_evidence
+ERROR tests/test_runner.py::test_unknown_tool_failure_returned_to_model - Fil...
+ERROR tests/test_runner.py::test_hidden_reasoning_not_persisted - FileNotFoun...
+ERROR tests/test_runner.py::test_no_automatic_business_retry_on_model_error
+ERROR tests/test_runner.py::test_timeout_checked_after_model_and_before_tools
+ERROR tests/test_runner.py::test_unique_run_directories - FileNotFoundError: ...
+ERROR tests/test_runner.py::test_history_injection_stays_inside_data_envelope
+33 passed, 1 deselected, 23 errors in 0.46s

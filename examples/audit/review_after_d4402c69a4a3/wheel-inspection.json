@@ -1,0 +1,15 @@
+{
+  "wheel": "enterprise_kb_agent-0.1.0-py3-none-any.whl",
+  "sha256": "0a0c24d9f77847179b511d0a7846e11d9ad856c37f15e0a978b09401a541c681",
+  "assets_present": {
+    "kb_agent/web_static/index.html": true,
+    "kb_agent/web_static/style.css": true,
+    "kb_agent/web_static/app.js": true
+  },
+  "module_entry_present": true,
+  "source_assets_match": {
+    "kb_agent/web_static/index.html": true,
+    "kb_agent/web_static/style.css": true,
+    "kb_agent/web_static/app.js": true
+  }
+}

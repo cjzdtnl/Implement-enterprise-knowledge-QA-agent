@@ -1,0 +1,191 @@
+[
+  {
+    "name": "pip-check",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试",
+    "started_at": "2026-10-31T10:30:50.264489+00:00",
+    "ended_at": "2026-10-31T10:30:50.646418+00:00",
+    "duration_seconds": 0.381941,
+    "exit_code": 0
+  },
+  {
+    "name": "offline-tests",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "-m",
+      "not live",
+      "--tb=short"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试",
+    "started_at": "2026-10-31T10:30:50.646586+00:00",
+    "ended_at": "2026-10-31T10:31:00.830705+00:00",
+    "duration_seconds": 10.184141,
+    "exit_code": 0
+  },
+  {
+    "name": "mock-evaluation",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kb_agent",
+      "evaluate",
+      "--mode",
+      "mock"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试",
+    "started_at": "2026-10-31T10:31:00.831226+00:00",
+    "ended_at": "2026-10-31T10:31:01.508418+00:00",
+    "duration_seconds": 0.677203,
+    "exit_code": 0
+  },
+  {
+    "name": "retrieval-evaluation",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kb_agent",
+      "retrieval-eval"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试",
+    "started_at": "2026-10-31T10:31:01.508693+00:00",
+    "ended_at": "2026-10-31T10:31:01.869788+00:00",
+    "duration_seconds": 0.361103,
+    "exit_code": 0
+  },
+  {
+    "name": "independent-negative-audit",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\.venv\\Scripts\\python.exe",
+      "scripts/offline_requirements_audit.py"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试",
+    "started_at": "2026-10-31T10:31:01.869967+00:00",
+    "ended_at": "2026-10-31T10:31:02.520523+00:00",
+    "duration_seconds": 0.650564,
+    "exit_code": 1
+  },
+  {
+    "name": "live-evaluation",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kb_agent",
+      "evaluate",
+      "--mode",
+      "live",
+      "--provider",
+      "deepseek"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试",
+    "started_at": "2026-10-31T10:31:02.629866+00:00",
+    "ended_at": "2026-10-31T10:31:03.007139+00:00",
+    "duration_seconds": 0.377285,
+    "exit_code": 2
+  },
+  {
+    "name": "clean-install",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "-e",
+      ".[test]"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\repository",
+    "started_at": "2026-10-31T10:31:12.461660+00:00",
+    "ended_at": "2026-10-31T10:31:49.451304+00:00",
+    "duration_seconds": 36.989653,
+    "exit_code": 0
+  },
+  {
+    "name": "clean-pip-check",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\repository",
+    "started_at": "2026-10-31T10:31:49.451486+00:00",
+    "ended_at": "2026-10-31T10:31:50.078441+00:00",
+    "duration_seconds": 0.626966,
+    "exit_code": 0
+  },
+  {
+    "name": "clean-offline-run",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\.venv\\Scripts\\python.exe",
+      "-m",
+      "kb_agent",
+      "run",
+      "--mode",
+      "mock",
+      "--input",
+      "examples/inputs/normal.json",
+      "--output-dir",
+      "work/acceptance-normal"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\repository",
+    "started_at": "2026-10-31T10:31:50.078787+00:00",
+    "ended_at": "2026-10-31T10:31:51.853474+00:00",
+    "duration_seconds": 1.774695,
+    "exit_code": 0
+  },
+  {
+    "name": "clean-offline-tests",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "-m",
+      "not live",
+      "--tb=short"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\repository",
+    "started_at": "2026-10-31T10:31:51.853661+00:00",
+    "ended_at": "2026-10-31T10:32:02.513354+00:00",
+    "duration_seconds": 10.659702,
+    "exit_code": 1
+  },
+  {
+    "name": "clean-build-wheel",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "wheel",
+      "--no-deps",
+      ".",
+      "-w",
+      "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\wheels"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\repository",
+    "started_at": "2026-10-31T10:32:02.513623+00:00",
+    "ended_at": "2026-10-31T10:32:07.479796+00:00",
+    "duration_seconds": 4.966185,
+    "exit_code": 0
+  },
+  {
+    "name": "clean-package-assets",
+    "command": [
+      "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0\\.venv\\Scripts\\python.exe",
+      "-c",
+      "from importlib.resources import files; import json; print(json.dumps({n: files('kb_agent').joinpath('web_static', n).is_file() for n in ['index.html','style.css','app.js']}))"
+    ],
+    "cwd": "F:\\文档\\ChatGPT\\小影笔试\\work\\review_after_c98b6bb0b9b0",
+    "started_at": "2026-10-31T10:32:07.480148+00:00",
+    "ended_at": "2026-10-31T10:32:07.593718+00:00",
+    "duration_seconds": 0.113581,
+    "exit_code": 0
+  }
+]

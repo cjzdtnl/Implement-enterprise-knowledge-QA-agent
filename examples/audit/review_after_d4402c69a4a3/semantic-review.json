@@ -1,0 +1,63 @@
+{
+  "reviewer": "Codex（AI审阅；不是候选人本人确认，也不是外部独立模型评测）",
+  "reviewed_at": "2026-10-31T10:39:16.688030+00:00",
+  "records": [
+    {
+      "directory": "examples/live/web/live_454d2dc0c4ae4cdfae676564/20261031T102314_4d5a38b88d4b",
+      "mode": "existing_live",
+      "verdict": "PASS_FOR_THIS_ANSWER",
+      "answer": "根据《报销材料提交制度》，报销材料须在费用发生后 30 天内提交。这里的起算点是“费用发生”，不是审批通过或付款时间；制度原文没有区分工作日或自然日，也未给出延期或例外规定。",
+      "claim": {
+        "text": "报销材料的最晚提交时间是费用发生后 30 天内。",
+        "citation_ids": [
+          "C1"
+        ]
+      },
+      "source": {
+        "citation_id": "C1",
+        "doc_id": "D01",
+        "version_date": "2025-01-10",
+        "section_id": "S01",
+        "quote": "报销材料须在费用发生后 30 天内提交。"
+      },
+      "checks": [
+        {
+          "aspect": "数字和单位",
+          "verdict": "PASS",
+          "reason": "回答与claim为30天；所引D01原文为30天，没有改成15天、45天或30年。"
+        },
+        {
+          "aspect": "条件",
+          "verdict": "PASS",
+          "reason": "起算条件均为费用发生后；回答没有改为审批通过后。D09付款FAQ也没有被引用为提交期限。"
+        },
+        {
+          "aspect": "对象",
+          "verdict": "PASS",
+          "reason": "回答、claim和原文对象均为报销材料提交；没有换成付款或休假。"
+        },
+        {
+          "aspect": "适用范围/例外/否定",
+          "verdict": "PASS",
+          "reason": "回答未添加员工或地域限制；说明本章节未区分工作日/自然日、未提供延期例外，未宣称不存在其他制度。"
+        },
+        {
+          "aspect": "来源与读取",
+          "verdict": "PASS",
+          "reason": "step2实际read_excerpt D01/S01，2025-01-10；step3请求带回同一原文；最终C1准确连续引文。"
+        }
+      ],
+      "limit": "只支持这一条已有正常回答；不能证明其他Live场景或全面语义可靠性。"
+    },
+    {
+      "directory": "examples/audit/requirements_8feb02db3796/A05/20261031T103430_a390928cebac",
+      "mode": "explicit_adversarial_mock",
+      "verdict": "FAIL_UNSUPPORTED_SCOPE",
+      "answer": "报销材料须在费用发生后 30 天内提交。 本制度仅限上海办公室正式员工，实习生不能适用。",
+      "reason": "原文仅说明报销材料须在费用发生后30天内提交；未说明上海办公室、正式员工或实习生排除。新增这些适用范围/对象限制不由引文支持。",
+      "production_validator": "仍漏检；该负例保留FAIL，未修改原预期。",
+      "limit": "这是AI对已知负例的语义审阅，不是生产自动修复或候选人人工确认。"
+    }
+  ],
+  "candidate_confirmation": "PENDING"
+}

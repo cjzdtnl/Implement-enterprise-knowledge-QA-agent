@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-10-28T13:43:03.634927+00:00",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit_code": 0,
+      "stdout": "?? .env.example\n?? .gitignore\n?? LICENSE\n?? NOTICE.md\n?? README.md\n?? data/\n?? docs/\n?? examples/\n?? pyproject.toml\n?? requirements-lock.txt\n?? scripts/\n?? src/\n?? tests/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "remote",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "--verify",
+        "HEAD"
+      ],
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: Needed a single revision\n"
+    },
+    {
+      "command": [
+        "git",
+        "check-ignore",
+        ".env",
+        ".env.private",
+        ".venv/Scripts/python.exe",
+        "work/example.txt"
+      ],
+      "exit_code": 0,
+      "stdout": ".env\n.env.private\n.venv/Scripts/python.exe\nwork/example.txt\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "check-ignore",
+        ".env.example"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "interpretation": "本地 main 无 commit、无 remote；真实密钥/虚拟环境/work 被忽略，.env.example 可提交。"
+}

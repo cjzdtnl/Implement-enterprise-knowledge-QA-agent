@@ -1,0 +1,59 @@
+[
+  {
+    "name": "pip-check",
+    "command": [
+      "python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "started_at": "2026-10-30T14:33:26.273060+00:00",
+    "ended_at": "2026-10-30T14:33:26.671044+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.397982
+  },
+  {
+    "name": "offline-tests",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-q",
+      "-m",
+      "not live",
+      "--tb=short"
+    ],
+    "started_at": "2026-10-30T14:33:26.671066+00:00",
+    "ended_at": "2026-10-30T14:33:28.687207+00:00",
+    "exit_code": 0,
+    "duration_seconds": 2.016146
+  },
+  {
+    "name": "mock-evaluation",
+    "command": [
+      "python",
+      "-m",
+      "kb_agent",
+      "evaluate",
+      "--mode",
+      "mock"
+    ],
+    "started_at": "2026-10-30T14:33:28.687227+00:00",
+    "ended_at": "2026-10-30T14:33:29.449678+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.762458
+  },
+  {
+    "name": "retrieval-evaluation",
+    "command": [
+      "python",
+      "-m",
+      "kb_agent",
+      "retrieval-eval"
+    ],
+    "started_at": "2026-10-30T14:33:29.449700+00:00",
+    "ended_at": "2026-10-30T14:33:29.808521+00:00",
+    "exit_code": 0,
+    "duration_seconds": 0.358832
+  }
+]

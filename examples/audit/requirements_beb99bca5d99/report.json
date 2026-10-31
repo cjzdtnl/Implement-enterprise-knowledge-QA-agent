@@ -1,0 +1,316 @@
+{
+  "started_at": "2026-10-30T14:29:42.098560+00:00",
+  "ended_at": "2026-10-30T14:29:42.305308+00:00",
+  "mode": "offline_audit",
+  "live_model_requests": 0,
+  "notice": "离线 Mock 只验证工程流程，不证明真实模型决策效果。错误答案是特意构造的负例。",
+  "probes": [
+    {
+      "id": "A01",
+      "name": "正确引文/claim 之外夹带无依据的99天",
+      "verdict": "PASS",
+      "expected": "独立评估拒绝错误回答中的额外数字",
+      "observed": {
+        "status": "step_limit",
+        "answer": "模型请求预算耗尽，任务未完成。",
+        "evaluation_errors": [
+          "expected status in ['answered'], got step_limit",
+          "answer missing number 30"
+        ],
+        "runtime_validation_codes": [
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER"
+        ]
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A01/20261030T142942_3850a0a98620",
+      "priority": "P1",
+      "note": "现有数字检查只检查 claim，answer 中额外制度数字可漏检。",
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A02",
+      "name": "冲突双方的引用ID串位",
+      "verdict": "PASS",
+      "expected": "独立评估拒绝30天引用15天原文/15天引用30天原文",
+      "observed": {
+        "status": "step_limit",
+        "conflicts": [],
+        "evaluation_errors": [
+          "expected status in ['needs_clarification'], got step_limit",
+          "answer missing number 30",
+          "answer missing number 15",
+          "missing conflict/gap/question",
+          "conflict sides lack both sources"
+        ],
+        "runtime_validation_codes": [
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER"
+        ]
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A02/20261030T142942_e95d079e6d33",
+      "priority": "P1",
+      "note": "有双方来源不代表各方表述与所引原文匹配。",
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A03",
+      "name": "空白回答不能标记answered",
+      "verdict": "PASS",
+      "expected": "执行器拒绝仅空白的成功回答",
+      "observed": {
+        "status": "step_limit",
+        "answer": "模型请求预算耗尽，任务未完成。",
+        "evaluation_errors": [
+          "expected status in ['answered'], got step_limit",
+          "answer missing number 30"
+        ],
+        "runtime_validation_codes": [
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER",
+          "EMPTY_ANSWER"
+        ]
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A03/20261030T142942_87cf8c44e2a3",
+      "priority": "P1",
+      "note": "现有 E01 评估能发现空白，但执行器本身没有拦截。",
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A04",
+      "name": "合法两文档语料的检索边界",
+      "verdict": "PASS",
+      "expected": "能够召回两份确实包含查询词的制度",
+      "observed": {
+        "hits": [
+          {
+            "doc_id": "D02",
+            "section_id": "S01",
+            "title": "报销材料提交补充说明",
+            "version_date": "2025-06-01",
+            "score": -1.442056,
+            "preview": "报销材料须在费用发生后 15 天内提交。"
+          },
+          {
+            "doc_id": "D01",
+            "section_id": "S01",
+            "title": "报销材料提交制度",
+            "version_date": "2025-01-10",
+            "score": -1.484819,
+            "preview": "报销材料须在费用发生后 30 天内提交。"
+          }
+        ],
+        "corpus_sha256": "0c4e5d7183092229aaddfcc4b030f9d8a1e6626a6fc799c39839fdae2c975ce4",
+        "fixture": "examples/audit/requirements_beb99bca5d99/fixtures/minimal_conflict.json",
+        "raw_bm25_scores": [
+          -1.4848191613889552,
+          -1.4420563695409534
+        ]
+      },
+      "directory": null,
+      "priority": "P2",
+      "note": "默认9/10篇语料正常；这是 schema 接受的小语料边界，负/零 BM25 分数被过滤导致漏检。",
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A05",
+      "name": "无原文依据的范围/对象限制",
+      "verdict": "FAIL",
+      "expected": "数字正确但新增无依据范围时需要被语义复核拒绝",
+      "observed": {
+        "status": "answered",
+        "answer": "报销材料须在费用发生后 30 天内提交。 本制度仅限上海办公室正式员工，实习生不能适用。",
+        "evaluation_errors": [],
+        "runtime_validation_codes": []
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A05/20261030T142942_20e8c6cdde12",
+      "priority": "P1",
+      "note": "这属于已声明的完整语义校验限制，不能靠字符串匹配完全解决；当前缺少必做人工审阅记录。",
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A06",
+      "name": "错版本引用反馈后修复",
+      "verdict": "PASS",
+      "expected": "先出现 SOURCE_MISMATCH，随后修复为有依据的正常答案",
+      "observed": {
+        "status": "answered",
+        "evaluation_errors": [],
+        "runtime_validation_codes": [
+          "SOURCE_MISMATCH",
+          "QUOTE_MISMATCH"
+        ]
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A06/20261030T142942_e763212597ce",
+      "priority": null,
+      "note": null,
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A07",
+      "name": "改写/错误原文反馈后修复",
+      "verdict": "PASS",
+      "expected": "先出现 QUOTE_MISMATCH，随后修复为有依据的正常答案",
+      "observed": {
+        "status": "answered",
+        "evaluation_errors": [],
+        "runtime_validation_codes": [
+          "QUOTE_MISMATCH",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER"
+        ]
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A07/20261030T142942_3a627a440cd0",
+      "priority": null,
+      "note": null,
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A08",
+      "name": "未读取的文档引用被拦截",
+      "verdict": "PASS",
+      "expected": "先出现 SOURCE_NOT_READ，随后修复为有依据的正常答案",
+      "observed": {
+        "status": "answered",
+        "evaluation_errors": [],
+        "runtime_validation_codes": [
+          "SOURCE_NOT_READ",
+          "UNSUPPORTED_NUMBER",
+          "UNSUPPORTED_NUMBER"
+        ]
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A08/20261030T142942_0682d4a335ae",
+      "priority": null,
+      "note": null,
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A09",
+      "name": "不存在的claim引用ID被拦截",
+      "verdict": "PASS",
+      "expected": "先出现 UNKNOWN_CITATION，随后修复为有依据的正常答案",
+      "observed": {
+        "status": "answered",
+        "evaluation_errors": [],
+        "runtime_validation_codes": [
+          "UNKNOWN_CITATION",
+          "UNSUPPORTED_NUMBER"
+        ]
+      },
+      "directory": "examples/audit/requirements_beb99bca5d99/A09/20261030T142942_9b1ea600c33c",
+      "priority": null,
+      "note": null,
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A10",
+      "name": "报销之外的产品FAQ检索/读取",
+      "verdict": "PASS",
+      "expected": "产品客服文档能检索并准确读取服务时间",
+      "observed": {
+        "search_result": {
+          "ok": true,
+          "data": {
+            "hits": [
+              {
+                "doc_id": "D10",
+                "section_id": "S01",
+                "title": "产品客服服务时间",
+                "version_date": "2025-05-10",
+                "score": 18.100506,
+                "preview": "产品客服的在线服务时间为工作日 09:00 至 18:00。"
+              },
+              {
+                "doc_id": "D08",
+                "section_id": "S01",
+                "title": "产品发布流程",
+                "version_date": "2025-04-10",
+                "score": 1.520932,
+                "preview": "产品发布前须完成测试验收，并由发布负责人记录版本号和回滚方案。"
+              }
+            ]
+          },
+          "error": null
+        },
+        "read_result": {
+          "ok": true,
+          "data": {
+            "doc_id": "D10",
+            "section_id": "S01",
+            "title": "产品客服服务时间",
+            "version_date": "2025-05-10",
+            "text": "产品客服的在线服务时间为工作日 09:00 至 18:00。",
+            "synthetic": true,
+            "scope": null,
+            "supersedes": null,
+            "priority": null
+          },
+          "error": null
+        }
+      },
+      "directory": null,
+      "priority": null,
+      "note": "只验证工具，未证明真实模型理解产品FAQ。",
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    },
+    {
+      "id": "A11",
+      "name": "生产决策模块不按固定文档/用例ID路由",
+      "verdict": "PASS",
+      "expected": "关键执行/传输/检索模块没有固定D01/D02或验收编号分支",
+      "observed": {
+        "fixed_id_literals": []
+      },
+      "directory": null,
+      "priority": null,
+      "note": "AST 字面量检查仅作代码审查辅助；Mock 和评估预期中的ID明确允许。",
+      "fixture_notice": "离线构造的错误模型输出，不是实际模型错误或真实决策证据。"
+    }
+  ],
+  "counts": {
+    "PASS": 10,
+    "FAIL": 1
+  },
+  "observations": {
+    "outside_question": "公司育儿假有多少天",
+    "outside_lexical_hits": [
+      {
+        "doc_id": "D06",
+        "section_id": "S01",
+        "title": "发票抬头 FAQ",
+        "version_date": "2025-03-05",
+        "score": 2.453917,
+        "preview": "报销发票抬头须填写“星河示例科技有限公司”。此公司名称为合成示例。"
+      }
+    ],
+    "outside_interpretation": "这些词面候选不提供育儿假依据，模型应过滤；本轮未验证模型是否正确处理。"
+  }
+}

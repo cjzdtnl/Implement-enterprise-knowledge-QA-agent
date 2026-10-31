@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>企业知识问答 Agent · 验收工作台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%231c2c46'/%3E%3Cpath d='M14 12v24m18-24L19 24l13 12' fill='none' stroke='%23e9bb70' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<svg class="symbol-bank" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8zm0 0v6h5M8 13h8m-8 4h6"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m12 3 10 18H2zm0 6v5m0 3v1"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v6h16v-6"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-stack" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8zm-10 10 10 5 10-5M2 18l10 5 10-5"/></symbol>
+</svg>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="企业知识问答首页"><span class="brand-mark">K<span>·</span></span><span><b>KNOWLEDGE</b><small>企业知识问答 Agent</small></span></a>
+    <div class="sidebar-rule"></div>
+    <div class="side-section-label">WORKSPACE <span>题号 03</span></div>
+    <button class="side-nav active" id="workspace-nav"><svg><use href="#i-grid"/></svg><span>验收工作台</span><span class="nav-dot"></span></button>
+    <button class="side-nav" id="documents-nav"><svg><use href="#i-doc"/></svg><span>知识资料</span><span class="side-count" id="side-doc-count">9</span></button>
+    <button class="side-nav" id="history-nav"><svg><use href="#i-clock"/></svg><span>运行记录</span></button>
+    <div class="side-section-label cases-label">验收用例 <span id="case-completion">0 / 10</span></div>
+    <nav id="case-list" aria-label="选择验收用例"></nav>
+    <div class="sidebar-footer"><span class="local-dot"></span><div><b>本地验收环境</b><small>合成知识库 · 单 Agent</small></div><span class="version">v0.1</span></div>
+  </aside>
+  <main class="main">
+    <header class="page-header">
+      <div><div class="eyebrow">ENTERPRISE KNOWLEDGE AGENT</div><h1>验收工作台<span class="title-dot">.</span></h1><p>从问题到原文，让每一步都有据可查。</p></div>
+      <div class="header-actions"><span class="connection" id="connection"><span></span>正在连接本地服务</span><button class="button button-white" id="history-top"><svg><use href="#i-clock"/></svg>运行记录</button></div>
+    </header>
+    <div class="overview">
+      <div class="overview-card"><span class="stat-icon blue"><svg><use href="#i-grid"/></svg></span><div><span class="stat-label">当前运行模式</span><strong id="mode-stat">离线 Mock</strong><small id="mode-stat-hint">验证工程链路</small></div></div>
+      <div class="overview-card"><span class="stat-icon gold"><svg><use href="#i-stack"/></svg></span><div><span class="stat-label">本次知识来源</span><strong><span id="corpus-stat">9</span><em>份合成文档</em></strong><small id="corpus-stat-hint">无冲突语料</small></div></div>
+      <div class="overview-card"><span class="stat-icon green"><svg><use href="#i-check"/></svg></span><div><span class="stat-label">本轮用例执行</span><strong><span id="progress-stat">0</span><em>/ 10 项</em></strong><small>自动断言与人工验收分别记录</small></div></div>
+    </div>
+    <div class="scope-banner" id="scope-banner"><svg><use href="#i-alert"/></svg><span><b>离线 Mock</b> 只验证工程流程，不证明真实模型决策效果。自由问答请切换 DeepSeek 实时模式。</span></div>
+    <div id="batch-progress" class="batch-progress hidden"><span id="batch-message"></span><progress id="batch-meter" max="10" value="0"></progress><button id="stop-batch" class="text-button">停止后续用例</button></div>
+    <label class="mobile-case-label" for="mobile-case">选择验收用例<select id="mobile-case"></select></label>
+    <div class="workspace-grid">
+      <section class="card settings-card" aria-labelledby="settings-title">
+        <div class="card-heading"><div><span class="step-label">01 / CONFIGURE</span><h2 id="settings-title">设置本次验收</h2></div><span class="pill neutral" id="case-pill">E01 · 明确答案</span></div>
+        <form id="run-form">
+          <div class="mode-switch" role="group" aria-label="选择运行模式"><button type="button" id="mock-mode" class="selected" aria-pressed="true">离线 Mock</button><button type="button" id="live-mode" aria-pressed="false">DeepSeek 实时 <span class="tiny-live-dot"></span></button></div>
+          <div id="live-fields" class="live-fields hidden">
+            <label for="api-key">DeepSeek API Key <span class="required">*</span></label>
+            <div class="password-row"><input id="api-key" type="password" placeholder="输入你的 API Key" autocomplete="off" spellcheck="false" maxlength="4096"><button type="button" id="toggle-key" class="icon-button" aria-label="显示API Key" aria-pressed="false"><svg><use href="#i-eye"/></svg></button></div>
+            <div class="key-help"><span>仅用于本次请求，不写入应用存储或运行日志。</span><button type="button" id="clear-key" class="text-button">清空密钥</button></div>
+            <label for="model">模型名称</label><input id="model" value="deepseek-flash" autocomplete="off" maxlength="128">
+            <p class="field-help">请求发送至 api.deepseek.com，使用非思考模式。实际调用会计入你的 API 用量。</p>
+          </div>
+          <div class="field-top"><label for="corpus">知识库版本</label><button type="button" id="edit-corpus" class="text-button">查看 / 编辑原文 ↗</button></div>
+          <select id="corpus"><option value="no_conflict">无冲突语料 · D01 + 其他资料</option><option value="conflict">冲突语料 · D01 + D02 + 其他资料</option><option value="replaced_45">内容替换 · D01 改为 45 天</option></select>
+          <div id="custom-corpus-note" class="custom-note hidden">已使用自定义语料，仅保存到本次运行。<button type="button" id="reset-corpus" class="text-button">恢复原语料</button></div>
+          <label for="fault">工具故障注入</label><select id="fault"><option value="none">不注入故障</option><option value="first_search">首次检索失败，之后恢复</option><option value="always_search">持续检索失败</option></select>
+          <div class="field-top question-top"><label for="question">员工问题</label><span class="shortcut">Ctrl + Enter 运行</span></div>
+          <textarea id="question" rows="4" maxlength="4000" required placeholder="输入你想核实的制度或产品问题…">报销材料最晚什么时候提交？</textarea>
+          <details class="history-editor" id="history-details"><summary>对话历史 <span id="history-count">0 条</span><span class="expand-hint">展开</span></summary><p class="field-help">用于指代解析，历史回答不作为制度依据。格式为 user / assistant 消息数组。</p><textarea id="history-input" rows="6" spellcheck="false" aria-label="对话历史JSON">[]</textarea></details>
+          <details class="advanced"><summary>执行预算与离线脚本<span class="expand-hint">展开</span></summary><div class="budget-grid"><label for="max-steps">最大模型步骤<input id="max-steps" type="number" min="1" max="100" value="12" required></label><label for="max-tools">最大工具调用<input id="max-tools" type="number" min="1" max="100" value="10" required></label></div><div id="mock-script-field"><label for="mock-scenario">显式 Mock 脚本</label><select id="mock-scenario"><option value="reimbursement">报销制度演示</option><option value="outside">资料外问题演示</option><option value="endless">持续工具请求（预算测试）</option></select><p class="field-help">脚本不会理解任意问题；更改问题不能证明模型能力。</p></div></details>
+          <div class="run-actions"><button type="submit" class="button button-primary" id="run-button"><svg><use href="#i-play"/></svg><span>开始运行</span><svg class="end-arrow"><use href="#i-arrow"/></svg></button><button type="button" class="button button-outline" id="run-all">逐项运行全部 10 个用例</button></div>
+          <p class="save-hint">运行产物自动保存 · 不覆盖原始材料</p>
+          <div id="form-error" class="form-error hidden" role="alert"></div>
+        </form>
+      </section>
+      <div class="results-column">
+        <section class="card result-card" aria-labelledby="result-title">
+          <div class="card-heading"><div><span class="step-label">02 / INSPECT</span><h2 id="result-title">回答与证据</h2></div><span class="pill neutral" id="task-status">等待运行</span></div>
+          <div class="result-meta" id="result-meta"><span><i class="small-dot"></i>准备就绪</span><span>先选择左侧用例，再开始运行</span></div>
+          <div class="result-tabs" role="tablist" aria-label="结果视图"><button role="tab" class="active" aria-selected="true" data-tab="answer">回答与引用<span id="citation-count">0</span></button><button role="tab" aria-selected="false" data-tab="trace">执行 Trace<span id="trace-count">0</span></button><button role="tab" aria-selected="false" data-tab="json">原始 JSON</button><a id="download" class="icon-button disabled" aria-label="下载运行产物" aria-disabled="true"><svg><use href="#i-download"/></svg></a></div>
+          <div id="answer-panel" class="tab-panel active" role="tabpanel">
+            <div class="empty-state" id="empty-state"><svg class="empty-illustration" viewBox="0 0 200 150" aria-hidden="true"><ellipse cx="102" cy="133" rx="65" ry="7" fill="#eef0f3"/><rect x="40" y="26" width="92" height="106" rx="8" fill="#edf1f7" transform="rotate(-9 40 26)"/><rect x="62" y="14" width="91" height="114" rx="8" fill="#fff" stroke="#bac6d6" stroke-width="2"/><path d="M78 39h44M78 53h55M78 67h28" stroke="#c4cedc" stroke-width="4" stroke-linecap="round"/><circle cx="133" cy="94" r="27" fill="#fbf4e9" stroke="#c69a52" stroke-width="3"/><path d="m153 114 19 20" stroke="#c69a52" stroke-width="7" stroke-linecap="round"/><path d="m122 94 7 7 14-16" fill="none" stroke="#c69a52" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>从一个问题，查看完整证据链</h3><p>回答、原文引用、冲突与工具调用过程<br>将在这里逐项呈现。</p><span class="empty-tag">推荐从 E01「明确答案」开始</span></div>
+            <div id="answer-content" class="answer-content hidden"></div>
+          </div>
+          <div id="trace-panel" class="tab-panel" role="tabpanel" hidden><div class="trace-intro"><span>按实际事件展示，步骤不预设。</span><select id="trace-filter" aria-label="过滤执行事件"><option value="all">全部事件</option><option value="tools">仅工具事件</option><option value="errors">仅异常 / 校验</option></select></div><div id="trace-list" class="trace-list"><p class="empty-note">运行后查看模型动作与工具反馈。</p></div></div>
+          <div id="json-panel" class="tab-panel" role="tabpanel" hidden><div class="json-toolbar"><span>本次结构化输出</span><button id="copy-json" class="text-button">复制 JSON</button></div><pre id="raw-json">运行后显示原始输出。</pre></div>
+        </section>
+        <section class="card review-card" id="review-card" aria-labelledby="review-title"><div class="card-heading"><div><span class="step-label">03 / REVIEW</span><h2 id="review-title">人工验收记录</h2></div><span class="pill neutral" id="review-status">待复核</span></div><div class="review-body"><p>自动断言通过后，仍需核对数字、条件、对象和适用范围。</p><label class="checkbox-row"><input id="evidence-checked" type="checkbox"><span>我已逐条核对结论与所引原文</span></label><div class="review-fields"><label for="review-verdict">人工判定<select id="review-verdict"><option value="NOT_RUN">待验收 / NOT_RUN</option><option value="PASS">通过 / PASS</option><option value="FAIL">不通过 / FAIL</option></select></label><button id="save-review" class="button button-white" disabled><svg><use href="#i-check"/></svg>保存记录</button></div><textarea id="review-notes" rows="2" maxlength="4000" placeholder="记录观察到的问题、关键步骤或你的修改…" aria-label="人工验收备注"></textarea><div class="review-caution"><svg><use href="#i-alert"/></svg><span>已知限制：数值正确时，模型新增无依据的范围条件仍可能漏检。</span></div></div></section>
+      </div>
+    </div>
+    <footer class="page-footer"><span>企业知识问答 Agent <span class="footer-divider">/</span> 可追溯 · 可复核 · 如实记录</span><span>全部知识材料为合成示例</span></footer>
+  </main>
+</div>
+<dialog id="corpus-dialog" class="large-dialog"><div class="dialog-heading"><div><span class="step-label">KNOWLEDGE SOURCE</span><h2>知识资料与原文</h2></div><button class="icon-button" data-close="corpus-dialog" aria-label="关闭知识资料"><svg><use href="#i-close"/></svg></button></div><div class="dialog-tabs"><button class="active" id="source-view-tab">阅读原文</button><button id="source-edit-tab">编辑本次语料</button></div><div id="source-documents" class="source-documents"></div><div id="source-editor-wrap" class="hidden"><p class="field-help">修改章节原文可验证答案是否跟随材料变化。应用后只保存到本次运行，不覆盖仓库文件。</p><textarea id="corpus-editor" rows="20" spellcheck="false" aria-label="自定义语料JSON"></textarea><div id="corpus-error" class="form-error hidden" role="alert"></div><div class="dialog-actions"><button id="apply-corpus" class="button button-primary">应用到本次运行</button><button class="button button-white" data-close="corpus-dialog">取消</button></div></div></dialog>
+<dialog id="history-dialog" class="large-dialog"><div class="dialog-heading"><div><span class="step-label">RUN HISTORY</span><h2>运行记录</h2></div><button class="icon-button" data-close="history-dialog" aria-label="关闭运行记录"><svg><use href="#i-close"/></svg></button></div><p class="field-help">离线与实时运行分别保存；点击记录查看本次输出、证据与 Trace。</p><div id="history-list" class="history-list"></div></dialog>
+<div id="toast" class="toast hidden" role="status"></div>
+</body>
+</html>

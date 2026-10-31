@@ -1,0 +1,12 @@
+{
+  "observed_command_window_started_at": "2026-10-31T10:28:46.230428+00:00",
+  "observed_command_window_ended_at": "2026-10-31T10:39:17.700522+00:00",
+  "elapsed_seconds": 631.47,
+  "notice": "仅为本次可观测命令窗口，未含完整阅读/规划时间；不是候选人投入，不据此宣称约3小时。",
+  "baseline": "examples/audit/review_baseline_ae9bd3364c1a/commands.json",
+  "final": "examples/audit/review_after_d4402c69a4a3/commands.json",
+  "post_checks": "examples/audit/review_after_d4402c69a4a3/post-checks.json",
+  "candidate_time": "PENDING",
+  "git_commit": null,
+  "git_remote": null
+}

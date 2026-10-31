@@ -1,0 +1,89 @@
+{
+  "description": "先固定的 10 条人工标签（AI 编写、待候选人复核）；开发集用于选择短语归一化，heldout 不用于调参。仅评估检索。",
+  "k": 3,
+  "queries": [
+    {
+      "id": "Q01",
+      "split": "dev",
+      "query": "报销材料最晚什么时候提交",
+      "relevant_doc_ids": [
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "id": "Q02",
+      "split": "dev",
+      "query": "报账凭据上交要求",
+      "relevant_doc_ids": [
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "id": "Q03",
+      "split": "dev",
+      "query": "年假申请提前多久",
+      "relevant_doc_ids": [
+        "D03"
+      ]
+    },
+    {
+      "id": "Q04",
+      "split": "dev",
+      "query": "账号密码至少几个字符",
+      "relevant_doc_ids": [
+        "D04"
+      ]
+    },
+    {
+      "id": "Q05",
+      "split": "dev",
+      "query": "订房间能用几个小时",
+      "relevant_doc_ids": [
+        "D05"
+      ]
+    },
+    {
+      "id": "Q06",
+      "split": "dev",
+      "query": "报销发票的抬头",
+      "relevant_doc_ids": [
+        "D06"
+      ]
+    },
+    {
+      "id": "Q07",
+      "split": "dev",
+      "query": "报销审批通过后多久付款",
+      "relevant_doc_ids": [
+        "D09"
+      ]
+    },
+    {
+      "id": "Q08",
+      "split": "heldout",
+      "query": "费用发生之后报帐材料何时递交",
+      "relevant_doc_ids": [
+        "D01",
+        "D02"
+      ]
+    },
+    {
+      "id": "Q09",
+      "split": "heldout",
+      "query": "忘了口令怎么办",
+      "relevant_doc_ids": [
+        "D04"
+      ]
+    },
+    {
+      "id": "Q10",
+      "split": "heldout",
+      "query": "国际航班需要谁批准",
+      "relevant_doc_ids": [
+        "D07"
+      ]
+    }
+  ]
+}

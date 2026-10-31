@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-28T13:18:45+00:00",
+  "start_basis": "首次显式采集的 UTC 时钟，发生在读取需求之后；更早检查的精确起点未采集。",
+  "ended_at": "2026-10-28T13:43:03.192366+00:00",
+  "duration_seconds": 1458.192,
+  "timezone_for_display": "Asia/Shanghai",
+  "activity": "AI 自动实现与验证的可观测工作窗口，不代表候选人个人投入。",
+  "candidate_personal_time": "待候选人补充",
+  "suggested_budget_seconds": 10800,
+  "git_commit": "未提交",
+  "github_remote_url": null,
+  "started_at_shanghai": "2026-10-28T21:18:45+08:00",
+  "ended_at_shanghai": "2026-10-28T21:43:03.192366+08:00",
+  "end_basis": "最终交付检查与打包启动时的实际 UTC 时钟；随后打包需少量时间。"
+}

@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-10-30T14:04:20+00:00",
+  "checkpoint_at": "2026-10-30T14:16:32.957815+00:00",
+  "duration_seconds_to_checkpoint": 732.958,
+  "activity": "AI 自动恢复工程、适配 DeepSeek 和离线验证；不是候选人个人投入",
+  "work_directory": "F:\\文档\\ChatGPT\\小影笔试",
+  "offline_tests": "75 passed, 1 deselected",
+  "mock_evaluation": "10 PASS",
+  "live_evaluation": "9 BLOCKED, 1 NOT_RUN",
+  "live_blocker": "本次检查尚无本机 .env 或进程密钥；未发出模型 HTTP 请求",
+  "candidate_personal_time": "待候选人补充",
+  "commit": "未提交",
+  "remote": null
+}

@@ -1,0 +1,51 @@
+{
+  "run_artifacts_checked": 218,
+  "eligible_files": 1140,
+  "errors": [],
+  "intentional_negative_outputs": [
+    {
+      "trace": "examples/audit/requirements_e13e6f2b3fad/A03/20261030T142643_cc12b5cf21e3/trace.jsonl",
+      "validation_errors": [
+        {
+          "code": "EMPTY_ANSWER",
+          "message": "answer 不能只有空白"
+        }
+      ]
+    },
+    {
+      "trace": "examples/audit/requirements_e13e6f2b3fad/A02/20261030T142643_e9b433265452/trace.jsonl",
+      "validation_errors": [
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "conflicts[0].sides[0] 中的阿拉伯数值未能在对应原文核对：3E+1"
+        },
+        {
+          "code": "UNSUPPORTED_QUANTITY",
+          "message": "conflicts[0].sides[0] 中的数值与单位组合未能在对应原文核对：30天"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "conflicts[0].sides[1] 中的阿拉伯数值未能在对应原文核对：15"
+        },
+        {
+          "code": "UNSUPPORTED_QUANTITY",
+          "message": "conflicts[0].sides[1] 中的数值与单位组合未能在对应原文核对：15天"
+        }
+      ]
+    },
+    {
+      "trace": "examples/audit/requirements_e13e6f2b3fad/A01/20261030T142643_9841ee3a96d1/trace.jsonl",
+      "validation_errors": [
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "answer 中的阿拉伯数值未能在对应原文核对：99"
+        },
+        {
+          "code": "UNSUPPORTED_QUANTITY",
+          "message": "answer 中的数值与单位组合未能在对应原文核对：99天"
+        }
+      ]
+    }
+  ],
+  "notice": "只校验工程证据一致性；故意错误的审查fixture单独列出，不计作业务通过。"
+}

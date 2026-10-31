@@ -1,0 +1,618 @@
+{
+  "started_at": "2026-10-31T10:28:58.099203+00:00",
+  "queries_sha256": "1ef68fbbff7eb97c9a4ab7d30b76856c40c94a40ea63a8f18cb7a637b483c0cd",
+  "k": 3,
+  "definition": "Recall@k=召回相关文档数/标签相关文档数；完整召回率=全部标签文档均入选的查询比例；不是回答准确率。",
+  "versions": {
+    "before": {
+      "rows": [
+        {
+          "id": "Q01",
+          "split": "dev",
+          "query": "报销材料最晚什么时候提交",
+          "relevant_doc_ids": [
+            "D01",
+            "D02"
+          ],
+          "hits": [
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 5.582825,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            },
+            {
+              "doc_id": "D02",
+              "section_id": "S01",
+              "title": "报销材料提交补充说明",
+              "version_date": "2025-06-01",
+              "score": 5.448569,
+              "preview": "报销材料须在费用发生后 15 天内提交。"
+            },
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 0.733198,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": true
+        },
+        {
+          "id": "Q02",
+          "split": "dev",
+          "query": "报账凭据上交要求",
+          "relevant_doc_ids": [
+            "D01",
+            "D02"
+          ],
+          "hits": [],
+          "recall_at_k": 0.0,
+          "complete_recall": false,
+          "conflict_both_recalled": false
+        },
+        {
+          "id": "Q03",
+          "split": "dev",
+          "query": "年假申请提前多久",
+          "relevant_doc_ids": [
+            "D03"
+          ],
+          "hits": [
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 8.605213,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            },
+            {
+              "doc_id": "D09",
+              "section_id": "S01",
+              "title": "报销到账 FAQ",
+              "version_date": "2025-05-01",
+              "score": 1.195462,
+              "preview": "报销申请审批通过后，财务在 7 个工作日内安排付款。该时限指付款处理。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q04",
+          "split": "dev",
+          "query": "账号密码至少几个字符",
+          "relevant_doc_ids": [
+            "D04"
+          ],
+          "hits": [
+            {
+              "doc_id": "D04",
+              "section_id": "S01",
+              "title": "账号密码安全 FAQ",
+              "version_date": "2025-02-10",
+              "score": 15.434966,
+              "preview": "账号密码至少包含 12 个字符。遗忘密码可通过内部门户发起重置。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q05",
+          "split": "dev",
+          "query": "订房间能用几个小时",
+          "relevant_doc_ids": [
+            "D05"
+          ],
+          "hits": [
+            {
+              "doc_id": "D05",
+              "section_id": "S01",
+              "title": "会议室预约规则",
+              "version_date": "2025-03-01",
+              "score": 1.9538,
+              "preview": "会议室预约通过办公日历办理；单次预约最长 2 小时。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q06",
+          "split": "dev",
+          "query": "报销发票的抬头",
+          "relevant_doc_ids": [
+            "D06"
+          ],
+          "hits": [
+            {
+              "doc_id": "D06",
+              "section_id": "S01",
+              "title": "发票抬头 FAQ",
+              "version_date": "2025-03-05",
+              "score": 7.348395,
+              "preview": "报销发票抬头须填写“星河示例科技有限公司”。此公司名称为合成示例。"
+            },
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 0.573862,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            },
+            {
+              "doc_id": "D02",
+              "section_id": "S01",
+              "title": "报销材料提交补充说明",
+              "version_date": "2025-06-01",
+              "score": 0.560062,
+              "preview": "报销材料须在费用发生后 15 天内提交。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q07",
+          "split": "dev",
+          "query": "报销审批通过后多久付款",
+          "relevant_doc_ids": [
+            "D09"
+          ],
+          "hits": [
+            {
+              "doc_id": "D09",
+              "section_id": "S01",
+              "title": "报销到账 FAQ",
+              "version_date": "2025-05-01",
+              "score": 7.911314,
+              "preview": "报销申请审批通过后，财务在 7 个工作日内安排付款。该时限指付款处理。"
+            },
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 1.177303,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            },
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 0.573862,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q08",
+          "split": "heldout",
+          "query": "费用发生之后报帐材料何时递交",
+          "relevant_doc_ids": [
+            "D01",
+            "D02"
+          ],
+          "hits": [
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 6.074283,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            },
+            {
+              "doc_id": "D02",
+              "section_id": "S01",
+              "title": "报销材料提交补充说明",
+              "version_date": "2025-06-01",
+              "score": 5.884339,
+              "preview": "报销材料须在费用发生后 15 天内提交。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": true
+        },
+        {
+          "id": "Q09",
+          "split": "heldout",
+          "query": "忘了口令怎么办",
+          "relevant_doc_ids": [
+            "D04"
+          ],
+          "hits": [],
+          "recall_at_k": 0.0,
+          "complete_recall": false,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q10",
+          "split": "heldout",
+          "query": "国际航班需要谁批准",
+          "relevant_doc_ids": [
+            "D07"
+          ],
+          "hits": [
+            {
+              "doc_id": "D07",
+              "section_id": "S01",
+              "title": "差旅机票预订规则",
+              "version_date": "2025-04-01",
+              "score": 6.509644,
+              "preview": "差旅机票通过行政预订平台购买；国际航班须事先取得部门负责人书面批准。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        }
+      ],
+      "summary": {
+        "all": {
+          "query_count": 10,
+          "mean_recall_at_k": 0.8,
+          "complete_recall_rate": 0.8,
+          "conflict_both_rate": 0.6666666666666666
+        },
+        "dev": {
+          "query_count": 7,
+          "mean_recall_at_k": 0.8571428571428571,
+          "complete_recall_rate": 0.8571428571428571,
+          "conflict_both_rate": 0.5
+        },
+        "heldout": {
+          "query_count": 3,
+          "mean_recall_at_k": 0.6666666666666666,
+          "complete_recall_rate": 0.6666666666666666,
+          "conflict_both_rate": 1.0
+        }
+      }
+    },
+    "after": {
+      "rows": [
+        {
+          "id": "Q01",
+          "split": "dev",
+          "query": "报销材料最晚什么时候提交",
+          "relevant_doc_ids": [
+            "D01",
+            "D02"
+          ],
+          "hits": [
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 5.582825,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            },
+            {
+              "doc_id": "D02",
+              "section_id": "S01",
+              "title": "报销材料提交补充说明",
+              "version_date": "2025-06-01",
+              "score": 5.448569,
+              "preview": "报销材料须在费用发生后 15 天内提交。"
+            },
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 0.733198,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": true
+        },
+        {
+          "id": "Q02",
+          "split": "dev",
+          "query": "报账凭据上交要求",
+          "relevant_doc_ids": [
+            "D01",
+            "D02"
+          ],
+          "hits": [
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 6.970988,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            },
+            {
+              "doc_id": "D02",
+              "section_id": "S01",
+              "title": "报销材料提交补充说明",
+              "version_date": "2025-06-01",
+              "score": 6.788727,
+              "preview": "报销材料须在费用发生后 15 天内提交。"
+            },
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 0.733198,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": true
+        },
+        {
+          "id": "Q03",
+          "split": "dev",
+          "query": "年假申请提前多久",
+          "relevant_doc_ids": [
+            "D03"
+          ],
+          "hits": [
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 8.605213,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            },
+            {
+              "doc_id": "D09",
+              "section_id": "S01",
+              "title": "报销到账 FAQ",
+              "version_date": "2025-05-01",
+              "score": 1.195462,
+              "preview": "报销申请审批通过后，财务在 7 个工作日内安排付款。该时限指付款处理。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q04",
+          "split": "dev",
+          "query": "账号密码至少几个字符",
+          "relevant_doc_ids": [
+            "D04"
+          ],
+          "hits": [
+            {
+              "doc_id": "D04",
+              "section_id": "S01",
+              "title": "账号密码安全 FAQ",
+              "version_date": "2025-02-10",
+              "score": 15.434966,
+              "preview": "账号密码至少包含 12 个字符。遗忘密码可通过内部门户发起重置。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q05",
+          "split": "dev",
+          "query": "订房间能用几个小时",
+          "relevant_doc_ids": [
+            "D05"
+          ],
+          "hits": [
+            {
+              "doc_id": "D05",
+              "section_id": "S01",
+              "title": "会议室预约规则",
+              "version_date": "2025-03-01",
+              "score": 13.363402,
+              "preview": "会议室预约通过办公日历办理；单次预约最长 2 小时。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q06",
+          "split": "dev",
+          "query": "报销发票的抬头",
+          "relevant_doc_ids": [
+            "D06"
+          ],
+          "hits": [
+            {
+              "doc_id": "D06",
+              "section_id": "S01",
+              "title": "发票抬头 FAQ",
+              "version_date": "2025-03-05",
+              "score": 7.348395,
+              "preview": "报销发票抬头须填写“星河示例科技有限公司”。此公司名称为合成示例。"
+            },
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 0.573862,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            },
+            {
+              "doc_id": "D02",
+              "section_id": "S01",
+              "title": "报销材料提交补充说明",
+              "version_date": "2025-06-01",
+              "score": 0.560062,
+              "preview": "报销材料须在费用发生后 15 天内提交。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q07",
+          "split": "dev",
+          "query": "报销审批通过后多久付款",
+          "relevant_doc_ids": [
+            "D09"
+          ],
+          "hits": [
+            {
+              "doc_id": "D09",
+              "section_id": "S01",
+              "title": "报销到账 FAQ",
+              "version_date": "2025-05-01",
+              "score": 7.911314,
+              "preview": "报销申请审批通过后，财务在 7 个工作日内安排付款。该时限指付款处理。"
+            },
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 1.177303,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            },
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 0.573862,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q08",
+          "split": "heldout",
+          "query": "费用发生之后报帐材料何时递交",
+          "relevant_doc_ids": [
+            "D01",
+            "D02"
+          ],
+          "hits": [
+            {
+              "doc_id": "D01",
+              "section_id": "S01",
+              "title": "报销材料提交制度",
+              "version_date": "2025-01-10",
+              "score": 9.747315,
+              "preview": "报销材料须在费用发生后 30 天内提交。"
+            },
+            {
+              "doc_id": "D02",
+              "section_id": "S01",
+              "title": "报销材料提交补充说明",
+              "version_date": "2025-06-01",
+              "score": 9.469042,
+              "preview": "报销材料须在费用发生后 15 天内提交。"
+            },
+            {
+              "doc_id": "D03",
+              "section_id": "S01",
+              "title": "年假申请流程",
+              "version_date": "2025-02-01",
+              "score": 0.733198,
+              "preview": "年假申请须提前 3 个工作日通过人事系统提交，直属主管审批后生效。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": true
+        },
+        {
+          "id": "Q09",
+          "split": "heldout",
+          "query": "忘了口令怎么办",
+          "relevant_doc_ids": [
+            "D04"
+          ],
+          "hits": [
+            {
+              "doc_id": "D04",
+              "section_id": "S01",
+              "title": "账号密码安全 FAQ",
+              "version_date": "2025-02-10",
+              "score": 3.036425,
+              "preview": "账号密码至少包含 12 个字符。遗忘密码可通过内部门户发起重置。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        },
+        {
+          "id": "Q10",
+          "split": "heldout",
+          "query": "国际航班需要谁批准",
+          "relevant_doc_ids": [
+            "D07"
+          ],
+          "hits": [
+            {
+              "doc_id": "D07",
+              "section_id": "S01",
+              "title": "差旅机票预订规则",
+              "version_date": "2025-04-01",
+              "score": 6.509644,
+              "preview": "差旅机票通过行政预订平台购买；国际航班须事先取得部门负责人书面批准。"
+            }
+          ],
+          "recall_at_k": 1.0,
+          "complete_recall": true,
+          "conflict_both_recalled": null
+        }
+      ],
+      "summary": {
+        "all": {
+          "query_count": 10,
+          "mean_recall_at_k": 1.0,
+          "complete_recall_rate": 1.0,
+          "conflict_both_rate": 1.0
+        },
+        "dev": {
+          "query_count": 7,
+          "mean_recall_at_k": 1.0,
+          "complete_recall_rate": 1.0,
+          "conflict_both_rate": 1.0
+        },
+        "heldout": {
+          "query_count": 3,
+          "mean_recall_at_k": 1.0,
+          "complete_recall_rate": 1.0,
+          "conflict_both_rate": 1.0
+        }
+      }
+    }
+  },
+  "corpus_sha256": "7f37a5d497744dcac26201da6430364515f874ca903f8ae6562a7fe4c8c569e0",
+  "ended_at": "2026-10-31T10:28:58.102127+00:00"
+}

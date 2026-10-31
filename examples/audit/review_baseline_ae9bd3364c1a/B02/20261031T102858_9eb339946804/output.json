@@ -1,0 +1,13 @@
+{
+  "status": "tool_failed",
+  "answer": "检索服务持续失败，未取得依据。",
+  "claims": [],
+  "citations": [],
+  "conflicts": [],
+  "knowledge_gaps": [
+    "无可用检索"
+  ],
+  "clarification_question": null,
+  "stop_reason": "explicit_offline_no_attempt",
+  "run_id": "20261031T102858_9eb339946804"
+}

@@ -1,0 +1,59 @@
+{
+  "status": "needs_clarification",
+  "answer": "资料对提交期限存在冲突：报销材料须在费用发生后 30 天内提交。；报销材料须在费用发生后 15 天内提交。 未说明适用范围或优先级，需确认适用制度。",
+  "claims": [
+    {
+      "text": "报销材料须在费用发生后 30 天内提交。",
+      "citation_ids": [
+        "C1"
+      ]
+    },
+    {
+      "text": "报销材料须在费用发生后 15 天内提交。",
+      "citation_ids": [
+        "C2"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "citation_id": "C1",
+      "doc_id": "D01",
+      "version_date": "2025-01-10",
+      "section_id": "S01",
+      "quote": "报销材料须在费用发生后 30 天内提交。"
+    },
+    {
+      "citation_id": "C2",
+      "doc_id": "D02",
+      "version_date": "2025-06-01",
+      "section_id": "S01",
+      "quote": "报销材料须在费用发生后 15 天内提交。"
+    }
+  ],
+  "conflicts": [
+    {
+      "issue": "报销材料提交期限",
+      "sides": [
+        {
+          "statement": "报销材料须在费用发生后 30 天内提交。",
+          "citation_ids": [
+            "C1"
+          ]
+        },
+        {
+          "statement": "报销材料须在费用发生后 15 天内提交。",
+          "citation_ids": [
+            "C2"
+          ]
+        }
+      ]
+    }
+  ],
+  "knowledge_gaps": [
+    "缺少适用范围、明确替代关系或优先级说明。"
+  ],
+  "clarification_question": "请向制度负责人确认本次费用适用哪份报销制度？",
+  "stop_reason": "mock_fixture_completed",
+  "run_id": "20261028T132929_c32ae4a773af"
+}

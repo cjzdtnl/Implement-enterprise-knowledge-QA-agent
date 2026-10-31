@@ -1,0 +1,10 @@
+{
+  "report": "examples/mock/evaluation_2026-10-28T133137_154909+0000_c93ed9/report.json",
+  "counts": {
+    "PASS": 10,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "NOT_RUN": 0
+  },
+  "notice": "离线 Mock 只验证工程流程，不证明真实模型决策效果。"
+}

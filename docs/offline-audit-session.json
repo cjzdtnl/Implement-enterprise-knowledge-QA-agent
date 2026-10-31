@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-30T14:18:55+00:00",
+  "report_written_at": "2026-10-30T14:35:47.482563+00:00",
+  "mode": "offline_only",
+  "live_requests": 0,
+  "baseline_expectations": "用户题号3截图及最初详细需求",
+  "verification_commands": "examples/verification/session_bf8c1fe47397/commands.json",
+  "adversarial_before": "examples/audit/requirements_e13e6f2b3fad/report.json",
+  "adversarial_after": "examples/audit/requirements_a430c097d544/report.json",
+  "standard_tests": "84 passed, 1 deselected",
+  "standard_mock": "10 PASS",
+  "adversarial_before_counts": {
+    "PASS": 6,
+    "FAIL": 5
+  },
+  "adversarial_after_counts": {
+    "PASS": 10,
+    "FAIL": 1
+  },
+  "remaining_failure": "A05：无依据范围/对象限制的完整语义支持",
+  "candidate_personal_time": "待候选人确认；不能将AI工作窗口当个人投入",
+  "completed_at": "2026-10-30T14:38:22.591429+00:00",
+  "ai_observed_duration_seconds": 1167.591
+}

@@ -1,0 +1,36 @@
+{
+  "synthetic": true,
+  "description": "全部为合成材料；D01 与 D02 没有说明适用范围、替代关系或优先级。",
+  "documents": [
+    {
+      "doc_id": "D01",
+      "title": "报销材料提交制度",
+      "version_date": "2025-01-10",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "报销材料须在费用发生后 30 天内提交。"
+        }
+      ]
+    },
+    {
+      "doc_id": "D02",
+      "title": "报销材料提交补充说明",
+      "version_date": "2025-06-01",
+      "synthetic": true,
+      "scope": null,
+      "supersedes": null,
+      "priority": null,
+      "sections": [
+        {
+          "section_id": "S01",
+          "text": "报销材料须在费用发生后 15 天内提交。"
+        }
+      ]
+    }
+  ]
+}

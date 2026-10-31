@@ -1,0 +1,10 @@
+{
+  "report": "examples/live/evaluation_2026-10-30T141541_374658+0000_a807b4/report.json",
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "BLOCKED": 9,
+    "NOT_RUN": 1
+  },
+  "notice": "真实模型评估，配置失败不降级为 Mock。"
+}

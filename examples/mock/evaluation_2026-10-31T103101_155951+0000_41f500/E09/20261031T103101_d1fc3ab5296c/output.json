@@ -1,0 +1,26 @@
+{
+  "status": "answered",
+  "answer": "报销材料须在费用发生后 45 天内提交。",
+  "claims": [
+    {
+      "text": "报销材料须在费用发生后 45 天内提交。",
+      "citation_ids": [
+        "C1"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "citation_id": "C1",
+      "doc_id": "D01",
+      "version_date": "2025-01-10",
+      "section_id": "S01",
+      "quote": "报销材料须在费用发生后 45 天内提交。"
+    }
+  ],
+  "conflicts": [],
+  "knowledge_gaps": [],
+  "clarification_question": null,
+  "stop_reason": "mock_fixture_completed",
+  "run_id": "20261031T103101_d1fc3ab5296c"
+}

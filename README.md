@@ -1,12 +1,31 @@
 # 企业知识问答 Agent
 
+小影科技笔试题 · Implement-enterprise-knowledge-QA-agent
+
 面向查找公司制度、产品 FAQ 的员工，提供问题与可选历史，返回中文回答、原文引用、冲突、资料缺口与任务状态。**全部材料为合成数据。题号 3（依据用户提供的项目要求截图）。**
 
 当前工作目录为 `F:\文档\ChatGPT\小影笔试`，2026-10-30 从上一轮交付恢复工程并增加 DeepSeek 适配。原有运行记录完整保留。
 
 <!-- evaluation-summary:start -->
-最新离线结果：**107 passed, 1 deselected in 10.20s**；Mock：10 PASS、0 FAIL、0 BLOCKED、0 NOT_RUN；本轮 live：0 PASS、0 FAIL、9 BLOCKED、1 NOT_RUN。没有模型请求，真实模型验收仍受配置阻塞。另有网页历史 Live 完成记录 1 条，未并入本批 CLI 通过率；详见下方路径核验。完整证据见 [评估文档](docs/03-evaluation.md)。
+最新工程结果：**107项离线测试通过，1项Live专用pytest未执行**；标准Mock 10 PASS。后续网页 E01—E07、E09—E10 共 **9项Live运行通过有限自动检查**，已有正常回答与冲突查证两种真实路径；E08为Mock专用预算用例。A05无依据适用范围仍可能漏检，独立审查保持10 PASS/1 FAIL，自动检查不等于完整语义支持。下表索引最新网页证据；docs/03、06、07、08中的配置受阻、仅一条Live及未提交等表述属于此前阶段快照，历史失败原样保留。
 <!-- evaluation-summary:end -->
+
+## 最新网页Live证据
+
+这些是已保存的真实模型运行；有限自动检查与完整语义/候选人人工确认分别记录。
+
+| 用例 | 实际状态 | 模型轮次/工具调用 | 原始证据 |
+|---|---|---|---|
+| E01 | answered | 4/6 | [输入](examples/live/web/live_c3ef51fa65114e38be6e7079/20261031T111040_e298479244fe/input.json) / [输出](examples/live/web/live_c3ef51fa65114e38be6e7079/20261031T111040_e298479244fe/output.json) / [Trace](examples/live/web/live_c3ef51fa65114e38be6e7079/20261031T111040_e298479244fe/trace.jsonl) / [meta](examples/live/web/live_c3ef51fa65114e38be6e7079/20261031T111040_e298479244fe/meta.json) |
+| E02 | needs_clarification | 4/7 | [输入](examples/live/web/live_dd54b1aedbe249e0bdcc1d0f/20261031T111046_1664a7eda6e1/input.json) / [输出](examples/live/web/live_dd54b1aedbe249e0bdcc1d0f/20261031T111046_1664a7eda6e1/output.json) / [Trace](examples/live/web/live_dd54b1aedbe249e0bdcc1d0f/20261031T111046_1664a7eda6e1/trace.jsonl) / [meta](examples/live/web/live_dd54b1aedbe249e0bdcc1d0f/20261031T111046_1664a7eda6e1/meta.json) |
+| E03 | insufficient_evidence | 4/5 | [输入](examples/live/web/live_5a442db36a7e4180829e710b/20261031T111056_6427d13a611b/input.json) / [输出](examples/live/web/live_5a442db36a7e4180829e710b/20261031T111056_6427d13a611b/output.json) / [Trace](examples/live/web/live_5a442db36a7e4180829e710b/20261031T111056_6427d13a611b/trace.jsonl) / [meta](examples/live/web/live_5a442db36a7e4180829e710b/20261031T111056_6427d13a611b/meta.json) |
+| E04 | answered | 5/5 | [输入](examples/live/web/live_460ba1d5aa3c4842af66b3fc/20261031T111102_d0ba0958417a/input.json) / [输出](examples/live/web/live_460ba1d5aa3c4842af66b3fc/20261031T111102_d0ba0958417a/output.json) / [Trace](examples/live/web/live_460ba1d5aa3c4842af66b3fc/20261031T111102_d0ba0958417a/trace.jsonl) / [meta](examples/live/web/live_460ba1d5aa3c4842af66b3fc/20261031T111102_d0ba0958417a/meta.json) |
+| E05 | answered | 4/5 | [输入](examples/live/web/live_90c8a739f7b441588e4a15d6/20261031T111112_bd5b64ad0152/input.json) / [输出](examples/live/web/live_90c8a739f7b441588e4a15d6/20261031T111112_bd5b64ad0152/output.json) / [Trace](examples/live/web/live_90c8a739f7b441588e4a15d6/20261031T111112_bd5b64ad0152/trace.jsonl) / [meta](examples/live/web/live_90c8a739f7b441588e4a15d6/20261031T111112_bd5b64ad0152/meta.json) |
+| E06 | answered | 4/6 | [输入](examples/live/web/live_c87b776626ab41f6aa4d6b9c/20261031T111120_7e2896823e77/input.json) / [输出](examples/live/web/live_c87b776626ab41f6aa4d6b9c/20261031T111120_7e2896823e77/output.json) / [Trace](examples/live/web/live_c87b776626ab41f6aa4d6b9c/20261031T111120_7e2896823e77/trace.jsonl) / [meta](examples/live/web/live_c87b776626ab41f6aa4d6b9c/20261031T111120_7e2896823e77/meta.json) |
+| E07 | tool_failed | 3/3 | [输入](examples/live/web/live_4181a848102049aa95a8d6c4/20261031T111127_700aba7f9877/input.json) / [输出](examples/live/web/live_4181a848102049aa95a8d6c4/20261031T111127_700aba7f9877/output.json) / [Trace](examples/live/web/live_4181a848102049aa95a8d6c4/20261031T111127_700aba7f9877/trace.jsonl) / [meta](examples/live/web/live_4181a848102049aa95a8d6c4/20261031T111127_700aba7f9877/meta.json) |
+| E09 | answered | 3/4 | [输入](examples/live/web/live_10677a60eb2744c3984c7780/20261031T111131_ea474904763a/input.json) / [输出](examples/live/web/live_10677a60eb2744c3984c7780/20261031T111131_ea474904763a/output.json) / [Trace](examples/live/web/live_10677a60eb2744c3984c7780/20261031T111131_ea474904763a/trace.jsonl) / [meta](examples/live/web/live_10677a60eb2744c3984c7780/20261031T111131_ea474904763a/meta.json) |
+| E10 | needs_clarification | 5/6 | [输入](examples/live/web/live_3f04b154ceb54ba7bed61f3c/20261031T111135_96582e2fd98a/input.json) / [输出](examples/live/web/live_3f04b154ceb54ba7bed61f3c/20261031T111135_96582e2fd98a/output.json) / [Trace](examples/live/web/live_3f04b154ceb54ba7bed61f3c/20261031T111135_96582e2fd98a/trace.jsonl) / [meta](examples/live/web/live_3f04b154ceb54ba7bed61f3c/20261031T111135_96582e2fd98a/meta.json) |
+
 
 **离线 Mock 只验证工程流程，不证明真实模型决策效果。** Mock 是显式脚本 fixture，只覆盖演示场景，不是通用问答模型；改写理解、冲突判断、错误后的决策能力仍需 live 验证。
 
@@ -154,7 +173,7 @@ python scripts/verify.py
 
 ## GitHub 提交
 
-本地 Git 已初始化为 main，**未提交、未配置远程 URL，无本次 commit SHA**。不要把任意旧 HEAD 当作最终成果。先填写 [AI 使用记录](docs/04-ai-usage.md) 的个人贡献和投入，补齐 live 验证，再提交。以下操作由候选人在确认材料后执行：
+本地Git使用main分支，已有实现提交 `7eebd87bf347c206c2b657476333141a904164cb`，并已关联[GitHub仓库](https://github.com/cjzdtnl/Implement-enterprise-knowledge-QA-agent)。原始远程初始化历史与本地实现通过普通合并保留，最新交付SHA以 `git rev-parse HEAD` 为准。个人贡献、投入及人工语义复核仍须本人确认。后续修改可按以下步骤提交：
 
 交付压缩包不包含 `.git` 和虚拟环境；从压缩包解压后先运行 `git init -b main`，再按安装步骤创建环境。
 
@@ -164,10 +183,9 @@ git add README.md pyproject.toml requirements-lock.txt .env.example .env.deepsee
 git diff --cached --stat
 git diff --cached --check
 git commit -m "Implement auditable enterprise knowledge QA agent"
-git remote add origin YOUR_ACTUAL_GITHUB_REPOSITORY_URL
 git push -u origin main
 git remote get-url origin
 git rev-parse HEAD
 ```
 
-`YOUR_ACTUAL_GITHUB_REPOSITORY_URL` 是必须替换的占位符，当前没有可报告的真实仓库地址。Git 作者身份也须由候选人按本人信息配置。提交之后运行最后两条命令，取得真实 URL 和最终 SHA；继续修改后应重新提交并再次读取 SHA。
+当前origin已配置为 `https://github.com/cjzdtnl/Implement-enterprise-knowledge-QA-agent.git`。提交/推送后运行最后两条命令读取真实URL与最新SHA；继续修改后应重新提交并再次读取SHA。Git作者身份应使用本人信息，不能把自动执行时间当作个人投入。
